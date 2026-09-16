@@ -1,0 +1,6 @@
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.DataAccess\bin\Debug\DrivingLicense.DataAccess.dll
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.DataAccess\bin\Debug\DrivingLicense.DataAccess.pdb
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.DataAccess\obj\Debug\DrivingLicense.DataAccess.csproj.AssemblyReference.cache
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.DataAccess\obj\Debug\DrivingLicense.DataAccess.csproj.CoreCompileInputs.cache
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.DataAccess\obj\Debug\DrivingLicense.DataAccess.dll
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.DataAccess\obj\Debug\DrivingLicense.DataAccess.pdb

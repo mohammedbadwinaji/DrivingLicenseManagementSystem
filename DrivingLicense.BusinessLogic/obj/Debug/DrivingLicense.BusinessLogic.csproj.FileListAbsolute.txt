@@ -1,0 +1,9 @@
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\bin\Debug\DrivingLicense.BusinessLogic.dll
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\bin\Debug\DrivingLicense.BusinessLogic.pdb
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\bin\Debug\DrivingLicense.DataAccess.dll
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\bin\Debug\DrivingLicense.DataAccess.pdb
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\obj\Debug\DrivingLicense.BusinessLogic.csproj.AssemblyReference.cache
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\obj\Debug\DrivingLicense.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\obj\Debug\DrivingL.ACC302B2.Up2Date
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\obj\Debug\DrivingLicense.BusinessLogic.dll
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.BusinessLogic\obj\Debug\DrivingLicense.BusinessLogic.pdb
