@@ -47,7 +47,38 @@ namespace DrivingLicense.DataAccess
             return dt;
         }
 
+        public static string GetFullNameByID(int personId)
+        {
+            string fullName = string.Empty;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"SELECT	(
+			                            P.FirstName + ' ' +
+			                            P.SecondName + ' ' +
+			                            ISNULL(P.ThirdName,'') + ' ' +
+			                            P.LastName + ' ' 
+		                            ) as FullName
+                            FROM People P
+                            WHERE P.PersonID = @PersonID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@PersonID", personId);
 
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if(result != null && result != DBNull.Value)
+                {
+                    fullName = (string)result;
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+            return fullName;
+        }
         public static bool GetPersonByID
             (
             int personId, out string firstName, out string secondName, out string thirdName,

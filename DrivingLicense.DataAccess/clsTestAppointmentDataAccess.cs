@@ -10,10 +10,10 @@ namespace DrivingLicense.DataAccess
 {
     public class clsTestAppointmentDataAccess
     {
-        public static DataTable GetAllAppointmentsByLocalDrivingLicenseApplicationAndTestType
+
+        public static DataTable GetAllLocalAppsAppointmentsPerTestType
             (
-                int localDrivingLicenseApplicationId,
-                int testTypeId
+                int localDrivingLicenseApplicationId,int testTypeId
             )
         {
             DataTable dt = new DataTable();
@@ -22,17 +22,15 @@ namespace DrivingLicense.DataAccess
 		                            TA.AppointmentDate,
 		                            TA.PaidFees,
 		                            TA.IsLocked
-                            FROM LocalDrivingLicenseApplications LDLA
-                            INNER JOIN Applications A
-                            ON LDLA.ApplicationID = A.ApplicationID
-                            INNER JOIN TestAppointments TA
-                            ON LDLA.LocalDrivingLicenseApplicationID = TA.LocalDrivingLicenseApplicationID
-                            WHERE       LDLA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID
-                                    AND TA.TestTypeID = @TestTypeID";
+                            FROM TestAppointments TA
+                            WHERE	TA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID 
+                                    AND
+		                            TA.TestTypeID = @TestTypeID";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingLicenseApplicationId);
             command.Parameters.AddWithValue("@TestTypeID", testTypeId);
+
             try
             {
                 connection.Open();
@@ -46,102 +44,70 @@ namespace DrivingLicense.DataAccess
                 connection.Close();
                 throw;
             }
+
             return dt;
         }
 
-        public static bool GetByID
-    (
-                int testAppointmentId,out int localDrivingLicenseApplicaationId,out int testTypeId,
-        out int testTypeId, out string testTypeTitle,out string licenseClassName, out string fullName, out int trail,
-        out DateTime appointmentDate, out decimal paidFees, out int testId,
-        out int createdByUserId,out string createdByUsername,out bool isLocked
-    )
+       
+
+        public static bool GetLastLocalAppAppointmentPerTestType(
+                int localDrivingLicenseApplicaationId, int testTypeId,out int testAppointmentId,
+                out DateTime appointmentDate, out decimal paidFees, out int createdByUserId,
+                out bool isLocked, out int retakeTestApplicationId, out int testId
+            )
         {
             bool isFound = false;
-            localDrivingLicenseApplicationId = -1;
-            licenseClassId = -1;
-            licenseClassName = "";
-            fullName = "";
-            trail = 0;
-            appointmentDate = DateTime.Now;
+            testAppointmentId = createdByUserId = retakeTestApplicationId = testId = -1;
+            appointmentDate = DateTime.Today;
             paidFees = 0;
-            testId = -1;
-            testTypeId = -1;
-            testTypeTitle= string.Empty;
-            createdByUserId = -1;
-            createdByUsername= string.Empty;
             isLocked = false;
+
             SqlConnection connection = new SqlConnection(clsSettings.connectionString);
-            string query = @"SELECT	TA.LocalDrivingLicenseApplicationID,
-		                            LC.LicenseClassID,
-		                            LC.ClassName,
-		                            TT.TestTypeID,
-		                            TT.TestTypeTitle,
-		                            (
-			                            P.FirstName + ' ' +
-			                            P.SecondName + ' ' +
-			                            ISNULL(P.ThirdName,'') + ' ' +
-			                            P.LastName + ' '
-		                            ) AS FullName,
-		                            (
-			                            SELECT COUNT(T.TestID)
-			                            FROM Tests T
-			                            WHERE T.TestAppointmentID = TA.TestAppointmentID
-		                            ) AS Trial,
+            string query = @"SELECT	TOP 1
+		                            TA.TestAppointmentID,
+		                            TA.TestTypeID,
+		                            TA.LocalDrivingLicenseApplicationID,
 		                            TA.AppointmentDate,
 		                            TA.PaidFees,
 		                            TA.CreatedByUserID,
-		                            U.UserName,
-                                    TA.IsLocked,
+		                            TA.IsLocked,
+		                            (
+			                            CASE 
+				                            WHEN TA.RetakeTestApplicationID IS NULL THEN -1
+				                            ELSE TA.RetakeTestApplicationID
+			                            END
+		                            ) as RetakeTestApplicationID,
 		                            (
 			                            CASE
 				                            WHEN T.TestID IS NULL THEN -1
 				                            ELSE T.TestID
 			                            END
-		                            ) AS TestID
+		                            ) as TestID
                             FROM TestAppointments TA
-                            INNER JOIN LocalDrivingLicenseApplications LDLA
-                            ON TA.LocalDrivingLicenseApplicationID = LDLA.LocalDrivingLicenseApplicationID
-                            INNER JOIN LicenseClasses LC
-                            ON LC.LicenseClassID = LDLA.LicenseClassID
-                            INNER JOIN Applications A
-                            ON LDLA.ApplicationID = A.ApplicationID
-                            INNER JOIN People P
-                            ON A.ApplicantPersonID = P.PersonID
-                            INNER JOIN Users U
-                            ON U.UserID = TA.CreatedByUserID
-                            INNER JOIN TestTypes TT
-                            ON TA.TestTypeID = TT.TestTypeID
                             LEFT JOIN Tests T
                             ON TA.TestAppointmentID = T.TestAppointmentID
-                            WHERE TA.TestAppointmentID = @TestAppointmentID";
+                            WHERE	TA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID
+		                            AND
+		                            TA.TestTypeID = @TestTypeID
+                            ORDER BY TA.TestAppointmentID DESC";
 
-            
-            SqlCommand command = new SqlCommand (query, connection);    
-            command.Parameters.AddWithValue("@TestAppointmentID", testAppointmentId);
-
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingLicenseApplicaationId);
+            command.Parameters.AddWithValue("@TestTypeID", testTypeId);
             try
-                {
-                    connection.Open();
+            {
+                connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                        
                 if (reader.Read())
                 {
                     isFound = true;
-
-                    localDrivingLicenseApplicationId = (int)reader["LocalDrivingLicenseApplicationID"];
-                    licenseClassId = (int)reader["LicenseClassID"];
-                    licenseClassName = (string)reader["ClassName"];
-                    testTypeId = (int)reader["TestTypeID"];
-                    testTypeTitle = (string)reader["TestTypeTitle"];
-                    fullName = (string)reader["FullName"];
-                    trail = (int)reader["Trial"];
-                    appointmentDate = (DateTime)reader["AppointmentDate"];
-                    paidFees = (decimal)reader["PaidFees"];
-                    testId = (int)reader["TestID"];
+                    testAppointmentId = (int)reader["TestAppointmentID"];
+                    appointmentDate = Convert.ToDateTime(reader["AppointmentDate"]);
+                    paidFees = Convert.ToDecimal(reader["PaidFees"]);
                     createdByUserId = (int)reader["CreatedByUserID"];
-                    createdByUsername = (string)reader["UserName"];
                     isLocked = (bool)reader["IsLocked"];
+                    retakeTestApplicationId = (int)reader["RetakeTestApplicationID"];
+                    testId = (int)reader["TestID"];
                 }
                 reader.Close();
                 connection.Close();
@@ -149,10 +115,77 @@ namespace DrivingLicense.DataAccess
             catch (Exception)
             {
                 connection.Close();
-                isFound = false;
+                throw;
             }
-                
-        
+
+            return isFound;
+        }
+
+        public static bool GetByID
+           (
+               int testAppointmentId, out int localDrivingLicenseApplicaationId, out int testTypeId,
+               out DateTime appointmentDate, out decimal paidFees, out int createdByUserId,
+               out bool isLocked, out int retakeTestApplicationId, out int testId
+           )
+        {
+            bool isFound = false;
+            localDrivingLicenseApplicaationId = testTypeId = createdByUserId = retakeTestApplicationId = testId = -1;
+            appointmentDate = DateTime.Today;
+            paidFees = 0;
+            isLocked = false;
+
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"SELECT	TA.TestAppointmentID,
+		                            TA.TestTypeID,
+		                            TA.LocalDrivingLicenseApplicationID,
+		                            TA.AppointmentDate,
+		                            TA.PaidFees,
+		                            TA.CreatedByUserID,
+		                            TA.IsLocked,
+		                            (
+			                            CASE 
+				                            WHEN TA.RetakeTestApplicationID IS NULL THEN -1
+				                            ELSE TA.RetakeTestApplicationID
+			                            END
+		                            ) as RetakeTestApplicationID,
+		                            (
+			                            CASE
+				                            WHEN T.TestID IS NULL THEN -1
+				                            ELSE T.TestID
+			                            END
+		                            ) as TestID
+
+                            FROM TestAppointments TA
+                            LEFT JOIN Tests T
+                            ON TA.TestAppointmentID = T.TestAppointmentID
+                            WHERE	TA.TestAppointmentID= @TestAppointmentID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@TestAppointmentID", testAppointmentId);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    localDrivingLicenseApplicaationId = (int)reader["LocalDrivingLicenseApplicationID"];
+                    testTypeId = (int)reader["TestTypeID"];
+                    appointmentDate = Convert.ToDateTime(reader["AppointmentDate"]);
+                    paidFees = Convert.ToDecimal(reader["PaidFees"]);
+                    createdByUserId = (int)reader["CreatedByUserID"];
+                    isLocked = (bool)reader["IsLocked"];
+                    retakeTestApplicationId = (int)reader["RetakeTestApplicationID"];
+                    testId = (int)reader["TestID"];
+                }
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
 
             return isFound;
         }
@@ -161,7 +194,7 @@ namespace DrivingLicense.DataAccess
             (
                 int testTypeId, int localDrivingLicenseApplicationId,
                 DateTime appointmentDate, decimal paidFees,
-                int createdByUserId, bool isLocked
+                int createdByUserId, bool isLocked, int retakeTestApplicationId
             )
         {
             int insertedId = -1;
@@ -175,6 +208,7 @@ namespace DrivingLicense.DataAccess
                                        ,PaidFees
                                        ,CreatedByUserID
                                        ,IsLocked
+                                       ,RetakeTestApplicationID
 		                               )
                                  VALUES
                                        (
@@ -184,6 +218,7 @@ namespace DrivingLicense.DataAccess
                                        ,@PaidFees
                                        ,@CreatedByUserID
                                        ,@IsLocked
+                                       ,@RetakeTestApplicationID
 		                               );
                             SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
@@ -193,6 +228,14 @@ namespace DrivingLicense.DataAccess
             command.Parameters.AddWithValue("@PaidFees", paidFees);
             command.Parameters.AddWithValue("@CreatedByUserID", createdByUserId);
             command.Parameters.AddWithValue("@IsLocked", isLocked);
+            if(retakeTestApplicationId == -1)
+            {
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", retakeTestApplicationId);
+            }
 
             try
             {
@@ -214,81 +257,63 @@ namespace DrivingLicense.DataAccess
             return insertedId;
         }
 
-        public static bool CheckIfLocalApplicationHasActiveTestAppintment
+        public static bool Update
             (
-            int localDrivingLicenseApplication,int testTypeId
+                int testAppointmentId,DateTime appointmentDate,bool isLocked
             )
         {
-            bool hasActiveAppointment = false;
+            int affectedRows = 0;
             SqlConnection connection = new SqlConnection(clsSettings.connectionString);
-            string query = @"SELECT 1
-                            FROM TestAppointments TA
-                            WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID
-                            AND IsLocked = 0    AND
-		                        TA.TestTypeID = @TestTypeID";
+            string query = @"   UPDATE TestAppointments
+                                SET  AppointmentDate = @Date,
+                                     IsLocked = @IsLocked
+                                WHERE TestAppointmentID = @TestAppointmentID";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingLicenseApplication);
-            command.Parameters.AddWithValue("@TestTypeID", testTypeId);
+            command.Parameters.AddWithValue("@TestAppointmentID", testAppointmentId);
+            command.Parameters.AddWithValue("@Date", appointmentDate);
+            command.Parameters.AddWithValue("@IsLocked", isLocked);
+
             try
             {
                 connection.Open();
-                object result = command.ExecuteScalar();
-                if(result != null && result != DBNull.Value)
-                {
-                    hasActiveAppointment = true;
-                } else
-                {
-                    hasActiveAppointment = false;
-                }
-                connection.Close();
+                affectedRows = command.ExecuteNonQuery();
+                command.Clone();
             }
             catch (Exception)
             {
                 connection.Close();
                 throw;
             }
-            return hasActiveAppointment;
+
+            return affectedRows > 0;
         }
 
-        public static bool CheckIfPassedTest
-            (
-            int localDrivingLicenseApplication, int testTypeId
-            )
+        public static bool UpdateIsLocked(int testAppointmentId , bool isLocked)
         {
-            bool passedTest = false;
+            int affectedRows = 0;
             SqlConnection connection = new SqlConnection(clsSettings.connectionString);
-            string query = @"SELECT 1
-                            FROM TestAppointments TA
-                            LEFT JOIN Tests T
-                            ON TA.TestAppointmentID = T.TestAppointmentID
-                            WHERE	TA.LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID AND
-		                            TA.IsLocked = 1		AND
-		                            TA.TestTypeID = @TestTypeID	AND
-		                            T.TestResult = 1";
+            string query = @"   UPDATE TestAppointments
+                                SET  IsLocked = @IsLocked
+                                WHERE TestAppointmentID = @TestAppointmentID";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingLicenseApplication);
-            command.Parameters.AddWithValue("@TestTypeID", testTypeId);
+            command.Parameters.AddWithValue("@TestAppointmentID", testAppointmentId);
+            command.Parameters.AddWithValue("@IsLocked", isLocked);
+
             try
             {
                 connection.Open();
-                object result = command.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
-                {
-                    passedTest = true;
-                }
-                else
-                {
-                    passedTest = false;
-                }
-                connection.Close();
+                affectedRows = command.ExecuteNonQuery();
+                command.Clone();
             }
             catch (Exception)
             {
                 connection.Close();
                 throw;
             }
-            return passedTest;
+
+            return affectedRows > 0;
         }
+
 
     }
 }

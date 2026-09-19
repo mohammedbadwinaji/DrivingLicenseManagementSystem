@@ -113,6 +113,31 @@ namespace DrivingLicense.DataAccess
             return affectedRows > 0;
         }
 
-        
+        public static decimal GetTestTypeFeesByID(int testTypeID)
+        {
+            decimal testTypeFees = 0;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"   SELECT TestTypeFees
+                                FROM TestTypes
+                                WHERE TestTypeID=@TestTypeID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@TestTypeID", testTypeID);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    testTypeFees = Convert.ToDecimal(result);
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+            return testTypeFees;
+        }
     }
 }

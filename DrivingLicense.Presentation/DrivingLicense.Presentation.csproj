@@ -81,6 +81,12 @@
     </Compile>
     <Compile Include="clsImage.cs" />
     <Compile Include="clsSettings.cs" />
+    <Compile Include="controls\usrDriverLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\usrDriverLicenseInfo.Designer.cs">
+      <DependentUpon>usrDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\usrLocalDrivingLicenseApplicationDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,12 @@
     </Compile>
     <Compile Include="tests\frmScheduleTest.Designer.cs">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tests\frmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tests\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
     </Compile>
     <Compile Include="tests\frmTestTypesManagement.cs">
       <SubType>Form</SubType>
@@ -251,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tests\frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tests\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tests\frmTestTypesManagement.resx">
       <DependentUpon>frmTestTypesManagement.cs</DependentUpon>
@@ -479,6 +494,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Retake Test 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Type 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Count 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

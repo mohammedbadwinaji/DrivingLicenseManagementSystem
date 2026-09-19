@@ -51,6 +51,7 @@
     <Compile Include="clsRemeberMeDataAccess.cs" />
     <Compile Include="clsSettings.cs" />
     <Compile Include="clsTestAppointmentDataAccess.cs" />
+    <Compile Include="clsTestDataAccess.cs" />
     <Compile Include="clsTestTypeDataAccess.cs" />
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

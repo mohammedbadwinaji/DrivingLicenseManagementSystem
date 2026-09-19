@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DrivingLicense.DataAccess
 {
-    internal class clsApplicationDataAccess
+    public class clsApplicationDataAccess
     {
         public static DataTable GetAllApplications()
         {
@@ -172,6 +172,7 @@ namespace DrivingLicense.DataAccess
 
             return affectedRows > 0;
         }
+
 
         public static bool Delete(int applicationId)
         {

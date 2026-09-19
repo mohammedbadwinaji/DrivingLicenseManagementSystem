@@ -331,5 +331,32 @@ namespace DrivingLicense.DataAccess
 
             return affectedRows > 0;
         }
+
+        public static string GetUsernameByID(int userId)
+        {
+            string username = string.Empty;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"SELECT U.Username
+                            FROM Users U
+                            WHERE U.UserID = @UserID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", userId);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if(result != null && result != DBNull.Value)
+                {
+                    username = (string)result;
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+            return username;
+        }
     }
 }

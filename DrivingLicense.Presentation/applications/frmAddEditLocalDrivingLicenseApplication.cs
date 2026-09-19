@@ -94,12 +94,12 @@ namespace DrivingLicense.Presentation.applications
                 }
                 usrPersonFilter1.LoadPersonInfo(_LDLApp.ApplicantPersonID);
                 usrPersonFilter1.DisableFilter();
-                lblLDLAppID.Text = _LDLApp.LocalDrivingLicenseApplicationsID.ToString();
+                lblLDLAppID.Text = _LDLApp.LocalDrivingLicenseApplicationID.ToString();
                 lblApplicationDate.Text = _LDLApp.ApplicationDate.ToShortDateString();
                 lblFees.Text = _LDLApp.PaidFees.ToString();
-                lblCreatedByUsername.Text = _LDLApp.CreatedByUserName;
+                lblCreatedByUsername.Text = _LDLApp.GetCreatedByUserName;
                 lblCreatedByUsername.Tag = _LDLApp.CreatedByUserID;
-                cmbLicenseClasses.SelectedValue = _LDLApp.LicenseClassID;
+                cmbLicenseClasses.SelectedValue = _LDLApp.LicenseClass;
             }
         }
 
@@ -138,7 +138,7 @@ namespace DrivingLicense.Presentation.applications
         private void _LoadLDLADataFromUI()
         {
             _LDLApp.ApplicantPersonID = usrPersonFilter1.GetPersonID();
-            _LDLApp.LicenseClassID =(int)cmbLicenseClasses.SelectedValue;
+            _LDLApp.LicenseClass = (enLicenseClass) cmbLicenseClasses.SelectedValue;
             _LDLApp.PaidFees = Convert.ToDecimal(lblFees.Text);
             _LDLApp.CreatedByUserID =(int) lblCreatedByUsername.Tag;
         }
@@ -150,7 +150,7 @@ namespace DrivingLicense.Presentation.applications
             if(_LDLApp.Save(out errorMessage))
             {
                 MessageBox.Show("Driving License Application Saved Successfully");
-                _LDLAppID = _LDLApp.LocalDrivingLicenseApplicationsID;
+                _LDLAppID = _LDLApp.LocalDrivingLicenseApplicationID;
                 _ResetForm();
                 OnSave?.Invoke(_LDLAppID);
             } else

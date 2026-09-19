@@ -119,6 +119,31 @@ namespace DrivingLicense.DataAccess
             return affectedRows > 0;
         }
 
-        
+        public static decimal GetApplicationTypeFeesByID(int applicationTypeId)
+        {
+            decimal applicationTypeFees = 0;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"   SELECT ApplicationFees
+                                FROM ApplicationTypes
+                                WHERE ApplicationTypeID = @ApplicationTypeID ";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@ApplicationTypeID", applicationTypeId);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null || result != DBNull.Value)
+                {
+                    applicationTypeFees = Convert.ToDecimal(result);
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+            return applicationTypeFees;
+        }
     }
 }

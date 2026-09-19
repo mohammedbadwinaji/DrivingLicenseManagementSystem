@@ -14,6 +14,8 @@ namespace DrivingLicense.Presentation.tests
 {
     public partial class frmScheduleTest : Form
     {
+        public event Action<int> OnTestSave;
+
         private int _LocalDrivingLicnenseApplicationID;
         private enTestType _TestType;
         public frmScheduleTest
@@ -29,7 +31,7 @@ namespace DrivingLicense.Presentation.tests
 
         private void _LoadApplicationAppointments()
         {
-            DataTable appointments = clsTestAppointment.GetAllTestAppointmentsByLocalDrivingLicenseApplicationID(_LocalDrivingLicnenseApplicationID,(int)_TestType);
+            DataTable appointments = clsTestAppointment.GetAllLocalAppAppointmentsPerTestType(_LocalDrivingLicnenseApplicationID, _TestType);
 
             appointments.Columns["TestAppointmentID"].ColumnName = "Appointment ID";
             appointments.Columns["AppointmentDate"].ColumnName = "Appointment Date";
@@ -87,22 +89,65 @@ namespace DrivingLicense.Presentation.tests
 
         }
 
+        private int _GetSelectedAppointmentID()
+        {
+            if (dgvAppointments.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvAppointments.SelectedRows[0];
+                if (selectedRow.Cells["Appointment ID"].Value != null)
+                {
+                    return Convert.ToInt32(selectedRow.Cells["Appointment ID"].Value);
+                }
+            }
+            return -1;
+        }
         private void btnAddNewAppointment_Click(object sender, EventArgs e)
         {
-           if(clsTestAppointment.IsLocalApplicationAlreadyHasActiveAppointment(_LocalDrivingLicnenseApplicationID,(int)_TestType))
+            clsTestAppointment testAppointment = clsTestAppointment.GetLastLocalAppAppointmentPerTestType(_LocalDrivingLicnenseApplicationID, _TestType);
+            if(testAppointment != null)
             {
-                MessageBox.Show("person already has an active appointment for this test , you cannot add new appointment","Not Allowed",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
-            if (clsTestAppointment.IsAlreadyPassedTest(_LocalDrivingLicnenseApplicationID, (int)_TestType))
-            {
-                MessageBox.Show("person already passed Test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (!testAppointment.IsLocked)
+                {
+                    MessageBox.Show("Person Already Has Active Appointment");
+                    return;
+                }
+                clsTest test = clsTest.FindByID(testAppointment.TestID);
+                if(test.TestResult == true)
+                {
+                    MessageBox.Show("Person Already Passed The Test");
+                    return;
+                }
             }
 
-            frmAddEditTestAppointment frm = new frmAddEditTestAppointment(-1,_TestType);
+            frmAddEditTestAppointment frm = new frmAddEditTestAppointment(-1,_LocalDrivingLicnenseApplicationID,_TestType);
             frm.ShowDialog();
+            _LoadApplicationAppointments();
+        }
 
+
+        private void cmiEditAppointment_Click(object sender, EventArgs e)
+        {
+            frmAddEditTestAppointment frm = new frmAddEditTestAppointment(_GetSelectedAppointmentID(),_LocalDrivingLicnenseApplicationID,_TestType);
+            frm.ShowDialog();
+            _LoadApplicationAppointments();
+
+        }
+
+        private void cmiTakeTest_Click(object sender, EventArgs e)
+        {
+            clsTestAppointment testAppointment = clsTestAppointment.FindByID(_GetSelectedAppointmentID());
+            if(testAppointment.IsLocked)
+            {
+                MessageBox.Show("this Test Appointment Is Locked");
+                return;
+            }
+
+            frmTakeTest frm = new frmTakeTest(_GetSelectedAppointmentID());
+            frm.OnTestSave += OnTestSave;
+            frm.ShowDialog();
+            
+            _LoadApplicationAppointments();
+            usrLocalDrivingLicenseApplicationDetails1.LoadLocalDrivingLicenseInfo(_LocalDrivingLicnenseApplicationID);
         }
     }
 }

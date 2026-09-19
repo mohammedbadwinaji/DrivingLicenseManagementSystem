@@ -94,26 +94,38 @@ namespace DrivingLicense.Presentation
 
             try
             {
+                clsTestAppointment testAppointment = new clsTestAppointment();
+                testAppointment.LocalDrivingLicenseApplicationID = 55;
+                testAppointment.AppointmentDate = DateTime.Today;
+                testAppointment.TestType = enTestType.Vision;
+                testAppointment.PaidFees = clsTestType.FindByID((int)enTestType.Vision).TestTypeFees;
+                testAppointment.CreatedByUserID = 1028;
+                int trails = testAppointment.GetTrial;
 
-                clsTestAppointment testAppointment = clsTestAppointment.FindByID(74);
                 string errorMessage;
-                testAppointment.Save(out errorMessage);
-                //clsTestAppointment testAppointment = new clsTestAppointment();
-                //testAppointment.TestType = enTestType.Vision;
-                //testAppointment.LocalDrivingLicenseApplicationID = 53;
-                //testAppointment.AppointmentDate = DateTime.Today ;
-                //testAppointment.PaidFees = 10;
-                //testAppointment.CreatedByUserID = 1028;
+                if (testAppointment.Save(out errorMessage))
+                {
+                    MessageBox.Show("Appointment Saved Successfully");
+                    if (trails > 0)
+                    {
+                        clsRetakeTestApplication retakeTestApplication = new clsRetakeTestApplication();
+                        retakeTestApplication.ApplicantPersonID = 3045;
+                        retakeTestApplication.CreatedByUserID = 1028;
+                        retakeTestApplication.Save(out errorMessage);
+                    }
+                }
+                clsTest test = new clsTest();
 
-                //string errorMessage = string.Empty;
-                //if (testAppointment.Save(out errorMessage))
-                //{
-                //    MessageBox.Show("Test Appointment Saved Successfully");
-                //} else
-                //{
-                //    MessageBox.Show(errorMessage);
-                //}
-               
+                test.TestAppointmentID = 1074;
+                test.TestResult = false;
+                test.Notes = null;
+                test.CreatedByUserID = 1028;
+
+                if (test.Save(out errorMessage))
+                {
+
+                }
+                
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);

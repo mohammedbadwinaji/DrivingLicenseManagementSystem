@@ -76,15 +76,13 @@ namespace DrivingLicense.DataAccess
 
         public static bool GetByID
         (
-            int lDLApplicationId, out int applicationId, out int licenseClassId, out string licenseClassName,
-            out int applicantPersonId, out string applicantFullName, out DateTime applicationDate,
-            out int applicationTypeId, out string applicationTypeTitle, out int applicationStatusId,
-            out string applicationStatusTitle, out DateTime lastStatusDate, out decimal paidFees,
-            out int createdByUserId, out string createdByUserName, out int passedTests,out int licenseId
+            int lDLApplicationId, out int applicationId, out int licenseClassId,
+            out int applicantPersonId, out DateTime applicationDate,out int applicationTypeId
+            , out int applicationStatusId,out DateTime lastStatusDate, out decimal paidFees,
+            out int createdByUserId, out int passedTests,out int licenseId
         )
         {
             applicationId = licenseClassId = applicantPersonId = applicationTypeId = applicationStatusId = createdByUserId = licenseId = -1;
-            licenseClassName = applicantFullName = applicationTypeTitle = applicationStatusTitle = createdByUserName = string.Empty;
             applicationDate = lastStatusDate = DateTime.MinValue;
             passedTests = 0;
             paidFees = 0;
@@ -95,24 +93,13 @@ namespace DrivingLicense.DataAccess
             string query = @"SELECT 	LDLA.LocalDrivingLicenseApplicationID,
 		                                A.ApplicationID,
 		                                LC.LicenseClassID,
-		                                LC.ClassName,
 		                                A.ApplicantPersonID,
-		                                P.NationalNo,
-		                                (
-			                                P.FirstName + ' ' +
-			                                P.SecondName + ' ' +
-			                                ISNULL(P.ThirdName,'') + ' ' +
-			                                ISNULL(P.LastName,'')
-		                                ) as FullName,
 		                                A.ApplicationDate,
 		                                A.ApplicationTypeID,
-		                                AT.ApplicationTypeTitle,
 		                                A.ApplicationStatusID,
-		                                ASS.StatusName,
 		                                A.LastStatusDate,
 		                                A.PaidFees,
 		                                A.CreatedByUserID,
-		                                U.UserName,
 		                                COUNT
 		                                (
 			                                CASE 
@@ -150,21 +137,12 @@ namespace DrivingLicense.DataAccess
 			                                A.ApplicationID,
 			                                A.ApplicantPersonID,
 			                                LC.LicenseClassID,
-			                                LC.ClassName,
-			                                P.NationalNo,
-			                                P.FirstName,
-			                                P.SecondName,
-			                                P.ThirdName,
-			                                P.LastName,
 			                                A.ApplicationDate,
 			                                A.ApplicationTypeID,
-			                                AT.ApplicationTypeTitle,
 			                                A.ApplicationStatusID,
-			                                ASS.StatusName,
 			                                A.LastStatusDate,
 			                                A.PaidFees,
 			                                A.CreatedByUserID,
-			                                U.UserName,
 			                                L.LicenseID";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -178,18 +156,13 @@ namespace DrivingLicense.DataAccess
                     isFound = true;
                     applicationId = (int)reader["ApplicationID"];
                     licenseClassId = (int)reader["LicenseClassID"];
-                    licenseClassName = reader["ClassName"].ToString();
                     applicantPersonId = (int)reader["ApplicantPersonID"];
-                    applicantFullName = reader["FullName"].ToString();
                     applicationDate = (DateTime)reader["ApplicationDate"];
                     applicationTypeId = (int)reader["ApplicationTypeID"];
-                    applicationTypeTitle = reader["ApplicationTypeTitle"].ToString();
                     applicationStatusId = (int)reader["ApplicationStatusID"];
-                    applicationStatusTitle = reader["StatusName"].ToString();
                     lastStatusDate = (DateTime)reader["LastStatusDate"];
                     paidFees = (decimal)reader["PaidFees"];
                     createdByUserId = (int)reader["CreatedByUserID"];
-                    createdByUserName = reader["UserName"].ToString();
                     passedTests = (int)reader["PassedTests"];
                     licenseId = (int)reader["LicenseID"];
                 }
@@ -207,22 +180,9 @@ namespace DrivingLicense.DataAccess
 
         public static int Insert
             (
-                int applicantPersonId,DateTime applicationDate,int applicationTypeId,
-                int applicationStatusId,DateTime lastStatusDate,decimal paidFees,
-                int createdByUserId,
-                int licenseClassId
+                int applicationId, int licenseClassId
             )
         {
-            int applicationId = clsApplicationDataAccess.Insert(
-                applicantPersonId,
-                applicationDate,
-                applicationTypeId,
-                applicationStatusId,
-                lastStatusDate,
-                paidFees,
-                createdByUserId
-            );
-
             if (applicationId <= 0)
                 return -1;
 
@@ -328,43 +288,6 @@ namespace DrivingLicense.DataAccess
             return affectedRows > 0;
         }
 
-
-        public static bool UpdateStatus
-            (
-                int localDrivingLicenseApplicaionId , int statusId
-            )
-        {
-            int affectedRows = 0;
-            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
-
-            string query = @"UPDATE Applications
-                            SET	ApplicationStatusID = @ApplicationStatusID,
-                            LastStatusDate = GETDATE()
-                            WHERE ApplicationID = 
-                            (
-	                            SELECT ApplicationID
-	                            FROM LocalDrivingLicenseApplications
-	                            WHERE LocalDrivingLicenseApplicationID= @LocalDrivingLicenseApplicationID
-                            );";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingLicenseApplicaionId);
-            command.Parameters.AddWithValue("@ApplicationStatusID", statusId);
-
-            try
-            {
-                connection.Open();
-                affectedRows = command.ExecuteNonQuery();
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                connection.Close();
-                throw;
-            }
-
-            return affectedRows > 0;
-        }
 
 
         public static bool GetApplicationLicense(int localDrivingLicenseApplicationId)

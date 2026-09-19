@@ -14,6 +14,7 @@ namespace DrivingLicense.BusinessLogic.Models
         ReplacementForALostDrivingLicense=3,
         ReplacementForADamagedDrivingLicense=4,
         ReleaseDetainedDrivingLicsense=5,
-        NewInternationalLicense=6
+        NewInternationalLicense=6,
+        RetakeTest= 7
     }
 }

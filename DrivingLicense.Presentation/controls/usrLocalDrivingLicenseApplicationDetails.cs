@@ -52,33 +52,33 @@ namespace DrivingLicense.Presentation.controls
 
             clsLocalDrivingLicenseApplication ldlApp = clsLocalDrivingLicenseApplication.FindByID(localDrivingLicenseApplicationId);
 
-            if(ldlApp == null)
+            if (ldlApp == null)
             {
                 _SetDefaultData();
                 MessageBox.Show($"No L D L Application With ID {localDrivingLicenseApplicationId}");
                 return;
             }
-            lblLDLAID.Text = ldlApp.LocalDrivingLicenseApplicationsID.ToString() ;
-            lblLicenseClass.Text = ldlApp.LicenseClassName;
-            
+            lblLDLAID.Text = ldlApp.LocalDrivingLicenseApplicationID.ToString();
+            lblLicenseClass.Text = ldlApp.LicenseClass.ToString();
+
             llShowLicenseInfo.Enabled = ldlApp.LicenseID != -1;
             pbLicense.Enabled = ldlApp.LicenseID != -1;
-            lblPassedTests.Text =ldlApp.PassedTests.ToString();
+            lblPassedTests.Text = ldlApp.PassedTests.ToString();
 
             lblApplicationID.Text = ldlApp.ApplicationID.ToString();
-            lblStatus.Text = ldlApp.ApplicationStatusTitle;
-            lblType.Text = ldlApp.ApplicationTypeTitle;
+            lblStatus.Text = ldlApp.ApplicationStatus.ToString();
+            lblType.Text = ldlApp.ApplicationType.ToString();
             lblFees.Text = ldlApp.PaidFees.ToString();
-            lblApplicant.Text = ldlApp.ApplicantFullName;
+            lblApplicant.Text = ldlApp.GetApplicantFullName;
             lblDate.Text = ldlApp.ApplicationDate.ToShortDateString();
             lblStatusDate.Text = ldlApp.LastStatusDate.ToShortDateString();
-            lblCreatedBy.Text = ldlApp.CreatedByUserName;
+            lblCreatedBy.Text = ldlApp.GetCreatedByUserName;
             llViewPersonInfo.Enabled = ldlApp.ApplicantPersonID != -1;
 
-            _CurrentLocalDrivingLicenseApplicationID = ldlApp.LocalDrivingLicenseApplicationsID;
+            _CurrentLocalDrivingLicenseApplicationID = ldlApp.LocalDrivingLicenseApplicationID;
             _ldlApp = ldlApp;
 
-            
+
         }
 
 

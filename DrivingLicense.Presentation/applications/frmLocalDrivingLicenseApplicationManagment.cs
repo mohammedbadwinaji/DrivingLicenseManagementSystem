@@ -41,7 +41,7 @@ namespace DrivingLicense.Presentation.applications
         }
         private void _LoadLocalDrivingLicenseApplications()
         {
-            _dtAllLocalDrivingLicenseApplications = clsLocalDrivingLicenseApplication.GetAllApplications();
+            _dtAllLocalDrivingLicenseApplications = clsLocalDrivingLicenseApplication.GetAllLocalApplications();
             dgvLocalDrivingLicenseApplications.DataSource = _dtAllLocalDrivingLicenseApplications;
 
             dgvLocalDrivingLicenseApplications.Columns["LocalDrivingLicenseApplicationID"].HeaderText = "L.D.L.AppID";
@@ -258,11 +258,15 @@ namespace DrivingLicense.Presentation.applications
             }
             return -1;
         }
+        private int _GetApplicationID()
+        {
+            return clsLocalDrivingLicenseApplication.FindByID(_GetSelectedLocalDrivingLicenseApplicationID()).ApplicationID;
+        }
         private void cmiEditLocalDrivingLicenseApplication_Click(object sender, EventArgs e)
         {
             clsLocalDrivingLicenseApplication ldlApp = clsLocalDrivingLicenseApplication.FindByID(_GetSelectedLocalDrivingLicenseApplicationID());
 
-            if(ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Canceled
+            if (ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Canceled
                 ||
                 ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Completed)
             {
@@ -289,13 +293,15 @@ namespace DrivingLicense.Presentation.applications
         private void cmiCancelApplication_Click(object sender, EventArgs e)
         {
             string errorMessage = string.Empty;
-            bool isApplicationCanceled = clsLocalDrivingLicenseApplication.Cancel(_GetSelectedLocalDrivingLicenseApplicationID(),out errorMessage);
+            
+            bool isApplicationCanceled = clsApplication.ChangeStatus(_GetApplicationID(), enApplicationStatus.Canceled);
 
             if (isApplicationCanceled)
             {
                 MessageBox.Show("Application Canceled Successfully");
                 _LoadLocalDrivingLicenseApplications();
-            } else
+            }
+            else
             {
                 MessageBox.Show(errorMessage);
             }
@@ -315,23 +321,22 @@ namespace DrivingLicense.Presentation.applications
             foreach (ToolStripMenuItem item in cmLocalDrivingLicenseApplications.Items)
             {
                    item.Enabled = false;
-
             }
         }
         private void cmLocalDrivingLicenseApplications_Opening(object sender, CancelEventArgs e)
         {
             clsLocalDrivingLicenseApplication ldlApp = clsLocalDrivingLicenseApplication.FindByID(_GetSelectedLocalDrivingLicenseApplicationID());
-            if(ldlApp == null)
+            if (ldlApp == null)
             {
                 cmLocalDrivingLicenseApplications.Close();
                 return;
             }
 
             _DisableAllContextMenuItems();
-            
 
-            if(ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Canceled
-                || 
+
+            if (ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Canceled
+                ||
                 ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Completed)
             {
                 cmiShowApplicationDetails.Enabled = true;
@@ -347,22 +352,28 @@ namespace DrivingLicense.Presentation.applications
 
 
             cmiScheduleTests.Enabled = true;
-            foreach(ToolStripMenuItem item in cmiScheduleTests.DropDownItems)
+            foreach (ToolStripMenuItem item in cmiScheduleTests.DropDownItems)
             {
                 item.Enabled = false;
             }
-            if(ldlApp.PassedTests == 0)
+            if (ldlApp.PassedTests == 0)
             {
                 cmiScheduleVisionTest.Enabled = true;
-            } else if (ldlApp.PassedTests == 1)
+            }
+            else if (ldlApp.PassedTests == 1)
             {
                 cmiScheduleWrittenTest.Enabled = true;
-            } else if (ldlApp.PassedTests == 2)
+            }
+            else if (ldlApp.PassedTests == 2)
             {
                 cmiScheduleStreetTest.Enabled = true;
-            }else
+            }
+            else
             {
-                if(ldlApp.LicenseID == -1)
+                _DisableAllContextMenuItems();
+                cmiShowApplicationDetails.Enabled = true;
+                cmiShowPersonLicensesHistory.Enabled = true;x`
+                if (ldlApp.LicenseID == -1)
                 {
                     cmiIssureDrivingLicenseFirstTime.Enabled = true;
                 }
@@ -378,19 +389,26 @@ namespace DrivingLicense.Presentation.applications
         private void cmiScheduleVisionTest_Click(object sender, EventArgs e)
         {
             frmScheduleTest frm = new frmScheduleTest(_GetSelectedLocalDrivingLicenseApplicationID(),enTestType.Vision);
+            frm.OnTestSave += _HandleTestSave;
             frm.ShowDialog();
         }
 
         private void cmiScheduleWrittenTest_Click(object sender, EventArgs e)
         {
             frmScheduleTest frm = new frmScheduleTest(_GetSelectedLocalDrivingLicenseApplicationID(), enTestType.Written);
+            frm.OnTestSave += _HandleTestSave;
             frm.ShowDialog();
         }
 
         private void cmiScheduleStreetTest_Click(object sender, EventArgs e)
         {
             frmScheduleTest frm = new frmScheduleTest(_GetSelectedLocalDrivingLicenseApplicationID(), enTestType.Street);
+            frm.OnTestSave += _HandleTestSave;
             frm.ShowDialog();
+        }
+        private void _HandleTestSave(int testId)
+        {
+            _LoadLocalDrivingLicenseApplications();
         }
     }
 }
