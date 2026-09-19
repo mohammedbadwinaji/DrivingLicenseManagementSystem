@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DrivingLicense.BusinessLogic.Applications;
 using DrivingLicense.BusinessLogic.Models;
+using DrivingLicense.Presentation.licenses;
 using DrivingLicense.Presentation.tests;
 
 namespace DrivingLicense.Presentation.applications
@@ -309,9 +310,17 @@ namespace DrivingLicense.Presentation.applications
 
         private void cmiShowApplicationLicense_Click(object sender, EventArgs e)
         {
-            //frmLocalDrivingLicenseApplicationDetails frm = new frmLocalDrivingLicenseApplicationDetails(_GetSelectedLocalDrivingLicenseApplicationID());
-            //frm.OnPersonalInformationSaved += _HandlePeraonalInformationSaved;
-            //frm.ShowDialog();
+            clsLocalDrivingLicenseApplication ldlApp = clsLocalDrivingLicenseApplication.FindByID(_GetSelectedLocalDrivingLicenseApplicationID());
+
+            if(ldlApp.LicenseID == -1)
+            {
+                MessageBox.Show("No License Issued Yet For This Application");
+                return;
+            }
+
+            frmShowLicenseDetails frm = new frmShowLicenseDetails(ldlApp.LicenseID);
+            frm.ShowDialog();
+
         }
 
         
@@ -335,11 +344,16 @@ namespace DrivingLicense.Presentation.applications
             _DisableAllContextMenuItems();
 
 
-            if (ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Canceled
-                ||
-                ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Completed)
+            if (ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Canceled)
             {
                 cmiShowApplicationDetails.Enabled = true;
+                cmiShowPersonLicensesHistory.Enabled = true;
+                return;
+            }
+            if(ldlApp.ApplicationStatus == BusinessLogic.Models.enApplicationStatus.Completed)
+            {
+                cmiShowApplicationDetails.Enabled = true;
+                cmiShowApplicationLicense.Enabled = true;
                 cmiShowPersonLicensesHistory.Enabled = true;
                 return;
             }
@@ -372,7 +386,7 @@ namespace DrivingLicense.Presentation.applications
             {
                 _DisableAllContextMenuItems();
                 cmiShowApplicationDetails.Enabled = true;
-                cmiShowPersonLicensesHistory.Enabled = true;x`
+                cmiShowPersonLicensesHistory.Enabled = true;
                 if (ldlApp.LicenseID == -1)
                 {
                     cmiIssureDrivingLicenseFirstTime.Enabled = true;
@@ -409,6 +423,22 @@ namespace DrivingLicense.Presentation.applications
         private void _HandleTestSave(int testId)
         {
             _LoadLocalDrivingLicenseApplications();
+        }
+
+        private void cmiIssureDrivingLicenseFirstTime_Click(object sender, EventArgs e)
+        {
+            frmIssueDrivingLicenseFirstTime frm = new frmIssueDrivingLicenseFirstTime(_GetSelectedLocalDrivingLicenseApplicationID());
+            frm.OnLicenseIssued += _HandleLicenseIssued;
+            frm.ShowDialog();
+        }
+        private void _HandleLicenseIssued(int licenseId)
+        {
+            _LoadLocalDrivingLicenseApplications();
+        }
+
+        private void cmiShowPersonLicensesHistory_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -112,7 +112,34 @@ namespace DrivingLicense.DataAccess
             return affectedRows > 0;
         }
 
+        public static string GetLicenseClassNameByID(int licenseClassId)
+        {
+            string licenseClassName = string.Empty;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
 
-        
+            string query = @"SELECT LC.ClassName
+                            FROM LicenseClasses LC
+                            WHERE LC.LicenseClassID = @LicenseClassID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@LicenseClassID", licenseClassId);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if(result != null && result!= DBNull.Value)
+                {
+                    licenseClassName = Convert.ToString(result);
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+            return licenseClassName;
+        }
+
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="Applications\clsRetakeTestApplication.cs" />
     <Compile Include="clsApplicationType.cs" />
     <Compile Include="clsCountry.cs" />
+    <Compile Include="clsDriver.cs" />
     <Compile Include="clsLicenseClass.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsRemeberMe.cs" />
@@ -53,9 +54,11 @@
     <Compile Include="clsTestAppointment.cs" />
     <Compile Include="clsTestType.cs" />
     <Compile Include="clsUser.cs" />
+    <Compile Include="Licenses\clsLicense.cs" />
     <Compile Include="Models\enApplicationStatus.cs" />
     <Compile Include="Models\enApplicationType.cs" />
     <Compile Include="Models\enLicenseClass.cs" />
+    <Compile Include="Models\enLicenseIssueReason.cs" />
     <Compile Include="Models\enTestType.cs" />
     <Compile Include="Models\stCredentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

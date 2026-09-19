@@ -87,6 +87,12 @@
     <Compile Include="controls\usrDriverLicenseInfo.Designer.cs">
       <DependentUpon>usrDriverLicenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="controls\usrLicenseDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\usrLicenseDetails.Designer.cs">
+      <DependentUpon>usrLicenseDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\usrLocalDrivingLicenseApplicationDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,18 @@
     </Compile>
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="licenses\frmIssueDrivingLicenseFirstTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="licenses\frmIssueDrivingLicenseFirstTime.Designer.cs">
+      <DependentUpon>frmIssueDrivingLicenseFirstTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="licenses\frmShowLicenseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="licenses\frmShowLicenseDetails.Designer.cs">
+      <DependentUpon>frmShowLicenseDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="people\frmAddEditPerson.cs">
       <SubType>Form</SubType>
@@ -218,6 +236,9 @@
     <EmbeddedResource Include="applications\frmLocalDrivingLicenseApplicationManagment.resx">
       <DependentUpon>frmLocalDrivingLicenseApplicationManagment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controls\usrLicenseDetails.resx">
+      <DependentUpon>usrLicenseDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\usrLocalDrivingLicenseApplicationDetails.resx">
       <DependentUpon>usrLocalDrivingLicenseApplicationDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +256,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses\frmIssueDrivingLicenseFirstTime.resx">
+      <DependentUpon>frmIssueDrivingLicenseFirstTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses\frmShowLicenseDetails.resx">
+      <DependentUpon>frmShowLicenseDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="people\frmAddEditPerson.resx">
       <DependentUpon>frmAddEditPerson.cs</DependentUpon>
@@ -506,6 +533,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IssueDrivingLicense 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LicenseView 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
