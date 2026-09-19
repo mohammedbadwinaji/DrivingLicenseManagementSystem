@@ -49,11 +49,9 @@ namespace DrivingLicense.DataAccess
             return dt;
         }
 
-
-
         public static bool GetByID
     (
-        int testAppointmentId, out int localDrivingLicenseApplicationId, out int licenseClassId,
+                int testAppointmentId,out int localDrivingLicenseApplicaationId,out int testTypeId,
         out int testTypeId, out string testTypeTitle,out string licenseClassName, out string fullName, out int trail,
         out DateTime appointmentDate, out decimal paidFees, out int testId,
         out int createdByUserId,out string createdByUsername,out bool isLocked
