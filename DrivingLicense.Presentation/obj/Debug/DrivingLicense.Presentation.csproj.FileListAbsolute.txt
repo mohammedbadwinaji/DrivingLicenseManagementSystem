@@ -39,3 +39,6 @@ D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentat
 D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentation\obj\Debug\DrivingLicense.Presentation.licenses.frmIssueDrivingLicenseFirstTime.resources
 D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentation\obj\Debug\DrivingLicense.Presentation.controls.usrLicenseDetails.resources
 D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentation\obj\Debug\DrivingLicense.Presentation.licenses.frmShowLicenseDetails.resources
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentation\obj\Debug\DrivingLicense.Presentation.licenses.frmPersonLicenseHistory.resources
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentation\obj\Debug\DrivingLicense.Presentation.controls.usrPersonLicenses.resources
+D:\Course_19\MySolution2\DrivingLicenseManagementSystem\DrivingLicense.Presentation\obj\Debug\DrivingLicense.Presentation.drivers.frmDrivers.resources

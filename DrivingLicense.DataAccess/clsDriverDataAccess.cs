@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,48 @@ namespace DrivingLicense.DataAccess
     public class clsDriverDataAccess
 
     {
+
+        public static DataTable GetAllDrivers()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"SELECT	D.DriverID,
+		                            P.PersonID,
+		                            P.NationalNo,
+		                            (
+			                            P.FirstName + ' ' +
+			                            P.SecondName + ' ' +
+			                            ISNULL(P.ThirdName,'') + ' ' +
+			                            P.LastName + ' ' 
+		                            ) AS FullName,
+		                            D.CreatedDate AS Date,
+		                            (
+			                            SELECT COUNT(L.DriverID)
+			                            FROM Licenses L
+			                            WHERE	L.DriverID = D.DriverID AND
+					                            L.IsActive = 1
+		                            ) AS ActiveLicenses
+                            FROM Drivers D
+                            INNER JOIN People P
+                            ON D.PersonID  = P.PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                dt.Load(reader);
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+            return dt;
+        }
         public  static bool GetByID
             (
                 int driverId, out int personId,out int createdByUserId,

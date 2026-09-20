@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DrivingLicense.Presentation.applications;
+using DrivingLicense.Presentation.drivers;
 using DrivingLicense.Presentation.people;
 using DrivingLicense.Presentation.tests;
 using DrivingLicense.Presentation.users;
@@ -100,6 +101,11 @@ namespace DrivingLicense.Presentation
         private void miLocalDrivingLicenseApplicationManagment_Click(object sender, EventArgs e)
         {
             OpenForm(new frmLocalDrivingLicenseApplicationManagment());
+        }
+
+        private void miDrivers_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmDrivers());
         }
     }
 }

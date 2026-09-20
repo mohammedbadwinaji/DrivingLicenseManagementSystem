@@ -54,6 +54,7 @@
     <Compile Include="clsTestAppointment.cs" />
     <Compile Include="clsTestType.cs" />
     <Compile Include="clsUser.cs" />
+    <Compile Include="Licenses\clsInternationalLicense.cs" />
     <Compile Include="Licenses\clsLicense.cs" />
     <Compile Include="Models\enApplicationStatus.cs" />
     <Compile Include="Models\enApplicationType.cs" />

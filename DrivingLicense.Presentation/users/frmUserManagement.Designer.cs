@@ -35,17 +35,17 @@
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.cmbFilterOptions = new System.Windows.Forms.ComboBox();
             this.cmiUsers = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.frmAddUser = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmiShowUserDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.cmiAddNewUser = new System.Windows.Forms.ToolStripMenuItem();
             this.cmiEditUser = new System.Windows.Forms.ToolStripMenuItem();
             this.cmiDeletePerson = new System.Windows.Forms.ToolStripMenuItem();
             this.cmiSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.cmiPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.frmAddUser = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmiUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,57 +111,6 @@
             this.cmiPhoneCall});
             this.cmiUsers.Name = "cmiPeople";
             this.cmiUsers.Size = new System.Drawing.Size(166, 232);
-            // 
-            // cmiShowUserDetails
-            // 
-            this.cmiShowUserDetails.Image = global::DrivingLicense.Presentation.Properties.Resources.PersonDetails_32;
-            this.cmiShowUserDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cmiShowUserDetails.Name = "cmiShowUserDetails";
-            this.cmiShowUserDetails.Size = new System.Drawing.Size(165, 38);
-            this.cmiShowUserDetails.Text = "Show Details";
-            this.cmiShowUserDetails.Click += new System.EventHandler(this.cmiShowUserDetails_Click);
-            // 
-            // cmiAddNewUser
-            // 
-            this.cmiAddNewUser.Image = global::DrivingLicense.Presentation.Properties.Resources.AddPerson_32;
-            this.cmiAddNewUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cmiAddNewUser.Name = "cmiAddNewUser";
-            this.cmiAddNewUser.Size = new System.Drawing.Size(165, 38);
-            this.cmiAddNewUser.Text = "Add New User";
-            this.cmiAddNewUser.Click += new System.EventHandler(this.cmiAddNewUser_Click);
-            // 
-            // cmiEditUser
-            // 
-            this.cmiEditUser.Image = global::DrivingLicense.Presentation.Properties.Resources.edit_32;
-            this.cmiEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cmiEditUser.Name = "cmiEditUser";
-            this.cmiEditUser.Size = new System.Drawing.Size(165, 38);
-            this.cmiEditUser.Text = "Edit";
-            this.cmiEditUser.Click += new System.EventHandler(this.cmiEditUser_Click);
-            // 
-            // cmiDeletePerson
-            // 
-            this.cmiDeletePerson.Image = global::DrivingLicense.Presentation.Properties.Resources.Delete_32;
-            this.cmiDeletePerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cmiDeletePerson.Name = "cmiDeletePerson";
-            this.cmiDeletePerson.Size = new System.Drawing.Size(165, 38);
-            this.cmiDeletePerson.Text = "Delete";
-            // 
-            // cmiSendEmail
-            // 
-            this.cmiSendEmail.Image = global::DrivingLicense.Presentation.Properties.Resources.send_email_32;
-            this.cmiSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cmiSendEmail.Name = "cmiSendEmail";
-            this.cmiSendEmail.Size = new System.Drawing.Size(165, 38);
-            this.cmiSendEmail.Text = "Send Email";
-            // 
-            // cmiPhoneCall
-            // 
-            this.cmiPhoneCall.Image = global::DrivingLicense.Presentation.Properties.Resources.call_32;
-            this.cmiPhoneCall.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cmiPhoneCall.Name = "cmiPhoneCall";
-            this.cmiPhoneCall.Size = new System.Drawing.Size(165, 38);
-            this.cmiPhoneCall.Text = "Phone Call";
             // 
             // dgvUsers
             // 
@@ -231,6 +180,57 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            // 
+            // cmiShowUserDetails
+            // 
+            this.cmiShowUserDetails.Image = global::DrivingLicense.Presentation.Properties.Resources.PersonDetails_32;
+            this.cmiShowUserDetails.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiShowUserDetails.Name = "cmiShowUserDetails";
+            this.cmiShowUserDetails.Size = new System.Drawing.Size(165, 38);
+            this.cmiShowUserDetails.Text = "Show Details";
+            this.cmiShowUserDetails.Click += new System.EventHandler(this.cmiShowUserDetails_Click);
+            // 
+            // cmiAddNewUser
+            // 
+            this.cmiAddNewUser.Image = global::DrivingLicense.Presentation.Properties.Resources.AddPerson_32;
+            this.cmiAddNewUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiAddNewUser.Name = "cmiAddNewUser";
+            this.cmiAddNewUser.Size = new System.Drawing.Size(165, 38);
+            this.cmiAddNewUser.Text = "Add New User";
+            this.cmiAddNewUser.Click += new System.EventHandler(this.cmiAddNewUser_Click);
+            // 
+            // cmiEditUser
+            // 
+            this.cmiEditUser.Image = global::DrivingLicense.Presentation.Properties.Resources.edit_32;
+            this.cmiEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiEditUser.Name = "cmiEditUser";
+            this.cmiEditUser.Size = new System.Drawing.Size(165, 38);
+            this.cmiEditUser.Text = "Edit";
+            this.cmiEditUser.Click += new System.EventHandler(this.cmiEditUser_Click);
+            // 
+            // cmiDeletePerson
+            // 
+            this.cmiDeletePerson.Image = global::DrivingLicense.Presentation.Properties.Resources.Delete_32;
+            this.cmiDeletePerson.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiDeletePerson.Name = "cmiDeletePerson";
+            this.cmiDeletePerson.Size = new System.Drawing.Size(165, 38);
+            this.cmiDeletePerson.Text = "Delete";
+            // 
+            // cmiSendEmail
+            // 
+            this.cmiSendEmail.Image = global::DrivingLicense.Presentation.Properties.Resources.send_email_32;
+            this.cmiSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiSendEmail.Name = "cmiSendEmail";
+            this.cmiSendEmail.Size = new System.Drawing.Size(165, 38);
+            this.cmiSendEmail.Text = "Send Email";
+            // 
+            // cmiPhoneCall
+            // 
+            this.cmiPhoneCall.Image = global::DrivingLicense.Presentation.Properties.Resources.call_32;
+            this.cmiPhoneCall.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiPhoneCall.Name = "cmiPhoneCall";
+            this.cmiPhoneCall.Size = new System.Drawing.Size(165, 38);
+            this.cmiPhoneCall.Text = "Phone Call";
             // 
             // frmUserManagement
             // 

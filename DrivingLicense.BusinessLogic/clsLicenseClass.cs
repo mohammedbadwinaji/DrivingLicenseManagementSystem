@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DrivingLicense.BusinessLogic.Models;
 using DrivingLicense.DataAccess;
 
 namespace DrivingLicense.BusinessLogic
@@ -27,6 +28,10 @@ namespace DrivingLicense.BusinessLogic
             ClassFess = classFess;
         }
 
+        public static string GetLicenseName(enLicenseClass licenseClass)
+        {
+            return clsLicenseClassDataAccess.GetLicenseClassNameByID((int)licenseClass);
+        }
         public static DataTable GetAllLicenseClasses()
         {
             return clsLicenseClassDataAccess.GetAllLicenseClasses();

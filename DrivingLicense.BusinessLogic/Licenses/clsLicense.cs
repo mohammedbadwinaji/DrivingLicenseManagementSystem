@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +87,10 @@ namespace DrivingLicense.BusinessLogic.Licenses
             DriverInfo = driverInfo;
         }
 
+        public static DataTable GetPersonLicneses(int personId)
+        {
+            return clsLicenseDataAccess.GetPersonLicenses(personId);
+        }
         public bool IssueFirstTime
             (
                 out string errorMessage

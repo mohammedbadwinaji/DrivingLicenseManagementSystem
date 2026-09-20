@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,10 @@ namespace DrivingLicense.BusinessLogic
             this.CreatedDate = DateTime.Now;
         }
 
+        public static DataTable GetAllDrivers()
+        {
+            return clsDriverDataAccess.GetAllDrivers();
+        }
         public static clsDriver FindByID(int driverId)
         {
             int personId, createdByUserId;
@@ -77,7 +82,7 @@ namespace DrivingLicense.BusinessLogic
                 );
         }
 
-        public bool AddNew
+        internal bool AddNew
             (
                 out string errorMessage
             )

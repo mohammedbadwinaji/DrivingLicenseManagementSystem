@@ -39,6 +39,8 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.newDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.miLocalDrivingLicenseApplicationManagment = new System.Windows.Forms.ToolStripMenuItem();
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miManageApplicationTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.miManageTestTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.miPeople = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +51,6 @@
             this.miChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.miSignOut = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
-            this.miLocalDrivingLicenseApplicationManagment = new System.Windows.Forms.ToolStripMenuItem();
-            this.internationalDrivingLicenseApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,6 +167,23 @@
             this.toolStripMenuItem7.Size = new System.Drawing.Size(366, 70);
             this.toolStripMenuItem7.Text = "Manage Applications";
             // 
+            // miLocalDrivingLicenseApplicationManagment
+            // 
+            this.miLocalDrivingLicenseApplicationManagment.Image = global::DrivingLicense.Presentation.Properties.Resources.LocalDriving_License;
+            this.miLocalDrivingLicenseApplicationManagment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miLocalDrivingLicenseApplicationManagment.Name = "miLocalDrivingLicenseApplicationManagment";
+            this.miLocalDrivingLicenseApplicationManagment.Size = new System.Drawing.Size(471, 38);
+            this.miLocalDrivingLicenseApplicationManagment.Text = "Local Driving License Applications";
+            this.miLocalDrivingLicenseApplicationManagment.Click += new System.EventHandler(this.miLocalDrivingLicenseApplicationManagment_Click);
+            // 
+            // internationalDrivingLicenseApplicationsToolStripMenuItem
+            // 
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Image = global::DrivingLicense.Presentation.Properties.Resources.International_32;
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Name = "internationalDrivingLicenseApplicationsToolStripMenuItem";
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(471, 38);
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Text = "International Driving License Applications";
+            // 
             // miManageApplicationTypes
             // 
             this.miManageApplicationTypes.Image = global::DrivingLicense.Presentation.Properties.Resources.Application_Types_64;
@@ -203,6 +220,7 @@
             this.miDrivers.Name = "miDrivers";
             this.miDrivers.Size = new System.Drawing.Size(151, 68);
             this.miDrivers.Text = "Drivers";
+            this.miDrivers.Click += new System.EventHandler(this.miDrivers_Click);
             // 
             // miUsers
             // 
@@ -267,23 +285,6 @@
             this.btnClose.TabIndex = 47;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // miLocalDrivingLicenseApplicationManagment
-            // 
-            this.miLocalDrivingLicenseApplicationManagment.Image = global::DrivingLicense.Presentation.Properties.Resources.LocalDriving_License;
-            this.miLocalDrivingLicenseApplicationManagment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.miLocalDrivingLicenseApplicationManagment.Name = "miLocalDrivingLicenseApplicationManagment";
-            this.miLocalDrivingLicenseApplicationManagment.Size = new System.Drawing.Size(471, 38);
-            this.miLocalDrivingLicenseApplicationManagment.Text = "Local Driving License Applications";
-            this.miLocalDrivingLicenseApplicationManagment.Click += new System.EventHandler(this.miLocalDrivingLicenseApplicationManagment_Click);
-            // 
-            // internationalDrivingLicenseApplicationsToolStripMenuItem
-            // 
-            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Image = global::DrivingLicense.Presentation.Properties.Resources.International_32;
-            this.internationalDrivingLicenseApplicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Name = "internationalDrivingLicenseApplicationsToolStripMenuItem";
-            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(471, 38);
-            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Text = "International Driving License Applications";
             // 
             // frmMain
             // 

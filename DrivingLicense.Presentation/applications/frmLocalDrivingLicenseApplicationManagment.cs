@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DrivingLicense.BusinessLogic;
 using DrivingLicense.BusinessLogic.Applications;
 using DrivingLicense.BusinessLogic.Models;
 using DrivingLicense.Presentation.licenses;
@@ -246,7 +247,24 @@ namespace DrivingLicense.Presentation.applications
         {
             this.Close();
         }
+        private int _GetSelectedPersonID()
+        {
+            string nationalNo = null;
+            if (dgvLocalDrivingLicenseApplications.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvLocalDrivingLicenseApplications.SelectedRows[0];
+                if (selectedRow.Cells["NationalNo"].Value != null)
+                {
+                    nationalNo = Convert.ToString(selectedRow.Cells["NationalNo"].Value);
+                }
+            }
+            if (string.IsNullOrEmpty(nationalNo))
+            {
+                return -1;
+            }
 
+            return clsPerson.FindByNationalNo(nationalNo).PersonId;
+        }
         private int _GetSelectedLocalDrivingLicenseApplicationID()
         {
             if (dgvLocalDrivingLicenseApplications.SelectedRows.Count > 0)
@@ -438,7 +456,9 @@ namespace DrivingLicense.Presentation.applications
 
         private void cmiShowPersonLicensesHistory_Click(object sender, EventArgs e)
         {
-
+            
+            frmPersonLicenseHistory frm = new frmPersonLicenseHistory(_GetSelectedPersonID());
+            frm.ShowDialog();
         }
     }
 }
