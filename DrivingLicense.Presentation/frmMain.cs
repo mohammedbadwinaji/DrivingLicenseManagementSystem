@@ -113,5 +113,10 @@ namespace DrivingLicense.Presentation
         {
             OpenForm(new frmIssueInternationalLicenseApplication());
         }
+
+        private void miManageInternationalLicenseApplications_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmInternationalLicenseApplicationManagement());
+        }
     }
 }

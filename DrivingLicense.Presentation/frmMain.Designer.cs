@@ -184,6 +184,7 @@
             this.miManageInternationalLicenseApplications.Name = "miManageInternationalLicenseApplications";
             this.miManageInternationalLicenseApplications.Size = new System.Drawing.Size(471, 38);
             this.miManageInternationalLicenseApplications.Text = "International Driving License Applications";
+            this.miManageInternationalLicenseApplications.Click += new System.EventHandler(this.miManageInternationalLicenseApplications_Click);
             // 
             // miManageApplicationTypes
             // 

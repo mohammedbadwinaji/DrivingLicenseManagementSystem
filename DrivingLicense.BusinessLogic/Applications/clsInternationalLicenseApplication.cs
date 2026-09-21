@@ -33,6 +33,12 @@ namespace DrivingLicense.BusinessLogic.Applications
                 .Edit;
         }
 
+
+        public static DataTable GetAllApplications()
+        {
+            return clsInternationalLicenseApplicationDataAccess.GetAllApplications();
+        }
+
         public static clsInternationalLicenseApplication FindByID(int internationalLicenseId)
         {
             int applicantPersonId, applicationTypeId, applicationStatusId, createdByUserId;
@@ -59,7 +65,7 @@ namespace DrivingLicense.BusinessLogic.Applications
         }
 
         
-        public bool _AddNewInternationalLicenseApplication(out string errorMessage)
+        private bool _AddNewInternationalLicenseApplication(out string errorMessage)
         {
             errorMessage = string.Empty;
 

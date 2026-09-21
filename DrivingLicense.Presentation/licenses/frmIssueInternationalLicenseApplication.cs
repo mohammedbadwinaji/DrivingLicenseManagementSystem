@@ -15,6 +15,8 @@ namespace DrivingLicense.Presentation.licenses
 {
     public partial class frmIssueInternationalLicenseApplication : Form
     {
+        public event Action<int> OnLicenseIssued;
+
         private clsInternationalLicenseApplication _Application;
         private clsInternationalLicense _InternationalLicense;
         public frmIssueInternationalLicenseApplication()
@@ -173,6 +175,7 @@ namespace DrivingLicense.Presentation.licenses
                     llShowInternationalLicenseInfo.Enabled = true;
                     usrLicenseFilter1.DisableFilter();
                     btnIssue.Enabled = false;
+                    OnLicenseIssued?.Invoke(_InternationalLicense.InternationalLicenseID);
                 }
                 else
                 {
@@ -183,6 +186,11 @@ namespace DrivingLicense.Presentation.licenses
             {
                 MessageBox.Show(errorMessage);
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
