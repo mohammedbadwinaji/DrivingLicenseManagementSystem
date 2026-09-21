@@ -33,6 +33,16 @@ namespace DrivingLicense.BusinessLogic
         public clsCountry CountryInfo { get; private set; }
 
 
+        public string GetFullName
+        {
+            get
+            {
+                return  this.FirstName + " " +
+                        this.SecondName + " " +
+                        this.ThirdName + " " +
+                        this.LastName + " ";
+            }
+        }
         public clsPerson()
         {
             this.PersonId = -1;

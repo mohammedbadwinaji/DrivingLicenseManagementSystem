@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DrivingLicense.Presentation.applications;
 using DrivingLicense.Presentation.drivers;
+using DrivingLicense.Presentation.licenses;
 using DrivingLicense.Presentation.people;
 using DrivingLicense.Presentation.tests;
 using DrivingLicense.Presentation.users;
@@ -106,6 +107,11 @@ namespace DrivingLicense.Presentation
         private void miDrivers_Click(object sender, EventArgs e)
         {
             OpenForm(new frmDrivers());
+        }
+
+        private void miAddNewInternationalLicenseApplication_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmIssueInternationalLicenseApplication());
         }
     }
 }

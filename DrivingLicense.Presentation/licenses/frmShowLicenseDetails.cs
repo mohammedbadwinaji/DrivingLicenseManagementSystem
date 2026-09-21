@@ -29,7 +29,7 @@ namespace DrivingLicense.Presentation.licenses
                 return;
             }
 
-            usrLicenseDetails1.LoadLicenseInof(_LicenseID);
+            usrLicenseDetails1.LoadLicenseInfo(_LicenseID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
