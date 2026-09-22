@@ -11,6 +11,78 @@ namespace DrivingLicense.DataAccess
     public class clsLicenseDataAccess
     {
         public static int Insert
+    (
+        int applicationId, int driverId, int licenseClassId,
+        string notes, decimal paidFees, int issueReason,
+        int createdByUserId,DateTime issueDate,DateTime expirationDate
+    )
+        {
+            int insertedId = -1;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"INSERT INTO Licenses
+                            (
+                                ApplicationID, DriverID, LicenseClass, IssueDate, 
+                                ExpirationDate, Notes, PaidFees, IsActive, IssueReason, CreatedByUserID
+                            )
+                            SELECT 
+                                @ApplicationID, 
+                                @DriverID, 
+                                LC.LicenseClassID,
+                                @IssueDate ,
+                                @ExpirationDate, 
+                                @Notes, 
+                                @PaidFees, 
+                                1, 
+                                @IssueReason,
+                                @CreatedByUserID
+                            FROM LicenseClasses LC
+                            WHERE LC.LicenseClassID = @LicenseClass;
+                            SELECT SCOPE_IDENTITY();";
+
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@ApplicationID", applicationId);
+            command.Parameters.AddWithValue("@DriverID", driverId);
+            command.Parameters.AddWithValue("@LicenseClass", licenseClassId);
+            command.Parameters.AddWithValue("@PaidFees", paidFees);
+            command.Parameters.AddWithValue("@IssueReason", issueReason);
+            command.Parameters.AddWithValue("@CreatedByUserID", createdByUserId);
+            command.Parameters.AddWithValue("@IssueDate", issueDate);
+            command.Parameters.AddWithValue("@ExpirationDate", expirationDate);
+
+
+            if (string.IsNullOrEmpty(notes))
+            {
+                command.Parameters.AddWithValue("@Notes", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@Notes", notes);
+            }
+
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int inserted))
+                {
+                    insertedId = inserted;
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+
+            }
+
+
+            return insertedId;
+        }
+        public static int Insert
             (
                 int applicationId, int driverId, int licenseClassId,
                 string notes, decimal paidFees, int issueReason,
@@ -180,6 +252,37 @@ namespace DrivingLicense.DataAccess
             }
 
             return dt;
+        }
+
+
+        public static bool UpdateActiveStatus
+            (
+                int licenseId,bool isActive
+            )
+        {
+            int affectedRow = 0;
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+
+            string query = @"UPDATE Licenses
+                            SET IsActive = @IsActive
+                            WHERE LicenseID= @LicenseID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@LicenseID", licenseId);
+            command.Parameters.AddWithValue("@IsActive", isActive);
+            try
+            {
+                connection.Open();
+                affectedRow = command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+
+            return affectedRow > 0;
         }
     }
 }

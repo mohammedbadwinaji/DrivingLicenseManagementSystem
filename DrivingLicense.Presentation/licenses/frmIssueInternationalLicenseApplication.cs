@@ -168,7 +168,7 @@ namespace DrivingLicense.Presentation.licenses
                 _InternationalLicense.DriverID = clsDriver.FindByPersonID(_Application.ApplicantPersonID).DriverID;
                 _InternationalLicense.CreatedByUserID = clsSettings.CurrentLoggedInUser.UserId;
                 _InternationalLicense.IssuedUsingLocalLicenseID = usrLicenseFilter1.GetLicenseID();
-                if (_InternationalLicense.Issue(out errorMessage))
+                if (_InternationalLicense.IssueFirstTime(out errorMessage))
                 {
                     MessageBox.Show("License Issued Successfully");
                     _LoadInfo();

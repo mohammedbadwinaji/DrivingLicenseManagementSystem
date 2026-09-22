@@ -85,6 +85,18 @@
     <Compile Include="applications\frmLocalDrivingLicenseApplicationManagment.Designer.cs">
       <DependentUpon>frmLocalDrivingLicenseApplicationManagment.cs</DependentUpon>
     </Compile>
+    <Compile Include="applications\frmRenewLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applications\frmRenewLicenseApplication.Designer.cs">
+      <DependentUpon>frmRenewLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="applications\frmReplacementForDamageOrLostApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applications\frmReplacementForDamageOrLostApplication.Designer.cs">
+      <DependentUpon>frmReplacementForDamageOrLostApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsImage.cs" />
     <Compile Include="clsSettings.cs" />
     <Compile Include="controls\usrInternationalLicenseDetails.cs">
@@ -280,6 +292,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="applications\frmLocalDrivingLicenseApplicationManagment.resx">
       <DependentUpon>frmLocalDrivingLicenseApplicationManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applications\frmRenewLicenseApplication.resx">
+      <DependentUpon>frmRenewLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applications\frmReplacementForDamageOrLostApplication.resx">
+      <DependentUpon>frmReplacementForDamageOrLostApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\usrInternationalLicenseDetails.resx">
       <DependentUpon>usrInternationalLicenseDetails.cs</DependentUpon>
@@ -617,6 +635,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New Application 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renew Driving License 321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

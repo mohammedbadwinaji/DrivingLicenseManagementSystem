@@ -28,24 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvLocalLicenses = new System.Windows.Forms.DataGridView();
             this.lblLocalLicensesRecords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvLocalLicenses = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblInternationalLicensesRecords = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInternationalLicenses = new System.Windows.Forms.DataGridView();
+            this.cmLocalIcenses = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmiShowLicenseInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmInternationalLicenses = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicenses)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternationalLicenses)).BeginInit();
+            this.cmLocalIcenses.SuspendLayout();
+            this.cmInternationalLicenses.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -83,45 +90,6 @@
             this.tabPage1.Text = "Local";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.lblInternationalLicensesRecords);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.dgvInternationalLicenses);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(890, 173);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "International";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dgvLocalLicenses
-            // 
-            this.dgvLocalLicenses.AllowUserToAddRows = false;
-            this.dgvLocalLicenses.AllowUserToDeleteRows = false;
-            this.dgvLocalLicenses.AllowUserToOrderColumns = true;
-            this.dgvLocalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvLocalLicenses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvLocalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLocalLicenses.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvLocalLicenses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvLocalLicenses.Location = new System.Drawing.Point(3, 3);
-            this.dgvLocalLicenses.MultiSelect = false;
-            this.dgvLocalLicenses.Name = "dgvLocalLicenses";
-            this.dgvLocalLicenses.ReadOnly = true;
-            this.dgvLocalLicenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLocalLicenses.Size = new System.Drawing.Size(884, 142);
-            this.dgvLocalLicenses.TabIndex = 17;
-            this.dgvLocalLicenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLocalLicenses_CellFormatting);
-            // 
             // lblLocalLicensesRecords
             // 
             this.lblLocalLicensesRecords.AutoSize = true;
@@ -141,6 +109,46 @@
             this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 24;
             this.label2.Text = "# Records :";
+            // 
+            // dgvLocalLicenses
+            // 
+            this.dgvLocalLicenses.AllowUserToAddRows = false;
+            this.dgvLocalLicenses.AllowUserToDeleteRows = false;
+            this.dgvLocalLicenses.AllowUserToOrderColumns = true;
+            this.dgvLocalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvLocalLicenses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvLocalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalLicenses.ContextMenuStrip = this.cmLocalIcenses;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLocalLicenses.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLocalLicenses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvLocalLicenses.Location = new System.Drawing.Point(3, 3);
+            this.dgvLocalLicenses.MultiSelect = false;
+            this.dgvLocalLicenses.Name = "dgvLocalLicenses";
+            this.dgvLocalLicenses.ReadOnly = true;
+            this.dgvLocalLicenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLocalLicenses.Size = new System.Drawing.Size(884, 142);
+            this.dgvLocalLicenses.TabIndex = 17;
+            this.dgvLocalLicenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLocalLicenses_CellFormatting);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.lblInternationalLicensesRecords);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.dgvInternationalLicenses);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(890, 173);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "International";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // lblInternationalLicensesRecords
             // 
@@ -170,14 +178,15 @@
             this.dgvInternationalLicenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvInternationalLicenses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInternationalLicenses.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInternationalLicenses.ContextMenuStrip = this.cmInternationalLicenses;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInternationalLicenses.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInternationalLicenses.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvInternationalLicenses.Location = new System.Drawing.Point(3, 3);
             this.dgvInternationalLicenses.MultiSelect = false;
@@ -186,6 +195,38 @@
             this.dgvInternationalLicenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInternationalLicenses.Size = new System.Drawing.Size(884, 142);
             this.dgvInternationalLicenses.TabIndex = 26;
+            // 
+            // cmLocalIcenses
+            // 
+            this.cmLocalIcenses.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmiShowLicenseInfo});
+            this.cmLocalIcenses.Name = "cmiPeople";
+            this.cmLocalIcenses.Size = new System.Drawing.Size(186, 42);
+            // 
+            // cmiShowLicenseInfo
+            // 
+            this.cmiShowLicenseInfo.Image = global::DrivingLicense.Presentation.Properties.Resources.License_View_32;
+            this.cmiShowLicenseInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cmiShowLicenseInfo.Name = "cmiShowLicenseInfo";
+            this.cmiShowLicenseInfo.Size = new System.Drawing.Size(185, 38);
+            this.cmiShowLicenseInfo.Text = "Show License Info";
+            this.cmiShowLicenseInfo.Click += new System.EventHandler(this.cmiShowLicenseInfo_Click);
+            // 
+            // cmInternationalLicenses
+            // 
+            this.cmInternationalLicenses.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.cmInternationalLicenses.Name = "cmiPeople";
+            this.cmInternationalLicenses.Size = new System.Drawing.Size(197, 64);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::DrivingLicense.Presentation.Properties.Resources.International_32;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 38);
+            this.toolStripMenuItem1.Text = "Show License Info";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // usrPersonLicenses
             // 
@@ -198,10 +239,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicenses)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternationalLicenses)).EndInit();
+            this.cmLocalIcenses.ResumeLayout(false);
+            this.cmInternationalLicenses.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -218,5 +261,9 @@
         private System.Windows.Forms.Label lblInternationalLicensesRecords;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvInternationalLicenses;
+        private System.Windows.Forms.ContextMenuStrip cmLocalIcenses;
+        private System.Windows.Forms.ToolStripMenuItem cmiShowLicenseInfo;
+        private System.Windows.Forms.ContextMenuStrip cmInternationalLicenses;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

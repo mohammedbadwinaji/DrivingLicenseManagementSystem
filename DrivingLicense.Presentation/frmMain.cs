@@ -118,5 +118,15 @@ namespace DrivingLicense.Presentation
         {
             OpenForm(new frmInternationalLicenseApplicationManagement());
         }
+
+        private void miRenewDrivingLicense_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmRenewLicenseApplication());
+        }
+
+        private void miReplacementForDamageOrLostApplication_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmReplacementForDamageOrLostApplication());
+        }
     }
 }

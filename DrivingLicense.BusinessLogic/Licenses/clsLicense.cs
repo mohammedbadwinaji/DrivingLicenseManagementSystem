@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DrivingLicense.BusinessLogic.Applications;
 using DrivingLicense.BusinessLogic.Models;
 using DrivingLicense.DataAccess;
 
@@ -87,9 +88,44 @@ namespace DrivingLicense.BusinessLogic.Licenses
             DriverInfo = driverInfo;
         }
 
+        public static bool DeActivate(int licenseId)
+        {
+            return clsLicenseDataAccess.UpdateActiveStatus(licenseId, false);
+        }
         public static DataTable GetPersonLicneses(int personId)
         {
             return clsLicenseDataAccess.GetPersonLicenses(personId);
+        }
+
+        public static clsLicense FindByID(int licenseId)
+        {
+            int applicationId, driverId, licenseClassId, issueReason, createdByUserId;
+            DateTime issueDate, expirationDate;
+            string notes;
+            decimal paidFees;
+            bool isActive, isDetained;
+
+            bool isFound = clsLicenseDataAccess.GetByID
+                (
+                    licenseId, out applicationId, out driverId,
+                    out licenseClassId, out issueDate, out expirationDate,
+                    out notes, out paidFees, out isActive,
+                    out issueReason, out createdByUserId, out isDetained
+                );
+
+            if (!isFound)
+            {
+                return null;
+            }
+
+            clsDriver driverInfo = clsDriver.FindByID(driverId);
+
+            return new clsLicense
+                (
+                    licenseId, applicationId, (enLicenseClass)licenseClassId, driverId,
+                    driverInfo.PersonID, issueDate, expirationDate, notes, paidFees,
+                    isActive, (enLicenseIssueReason)issueReason, createdByUserId, isDetained, driverInfo
+                );
         }
         public bool IssueFirstTime
             (
@@ -160,35 +196,184 @@ namespace DrivingLicense.BusinessLogic.Licenses
         }
 
 
-        public static clsLicense FindByID(int licenseId)
+        public bool Renew
+            (
+                int oldLicenseId,
+                out string errorMessage
+            )
         {
-            int applicationId, driverId, licenseClassId, issueReason, createdByUserId;
-            DateTime issueDate, expirationDate;
-            string notes;
-            decimal paidFees;
-            bool isActive,isDetained;
-
-            bool isFound = clsLicenseDataAccess.GetByID
-                (
-                    licenseId,out applicationId, out driverId,
-                    out licenseClassId,out issueDate,out expirationDate,
-                    out notes,out paidFees,out isActive,
-                    out issueReason,out createdByUserId,out isDetained
-                );
-
-            if (!isFound)
+            if(this.PaidFees < clsApplicationType.GetFees(enApplicationType.RenewDrivingLicenseService))
             {
-                return null;
+                errorMessage = "Person Must Pay All Fees";
+                return false;
+            }
+            if(this.CreatedByUserID == -1)
+            {
+                errorMessage = "User Must Renew This License";
+                return false;
+            }
+            errorMessage = string.Empty;
+
+            clsLicense oldLicense = clsLicense.FindByID(oldLicenseId);
+            if (oldLicense == null)
+            {
+                errorMessage = $"No License With ID {oldLicenseId} Exists To Renew";
+                return false;
             }
 
-            clsDriver driverInfo = clsDriver.FindByID(driverId);
+            if (oldLicense.ExpirationDate < DateTime.Today)
+            {
+                errorMessage = $"Selected License Is Not Yet Expired, It Will Expire On {oldLicense.ExpirationDate.ToShortDateString()}";
+                return false;
+            }
 
-            return new clsLicense
+            if (!oldLicense.IsActive)
+            {
+                errorMessage = $"Selected License Is Not Active, You Cannot Renew It";
+                return false;
+            }
+
+
+            clsRenewLocalLicenseApplication renewApplication = new clsRenewLocalLicenseApplication();
+            renewApplication.ApplicantPersonID = oldLicense.PersonID;
+            renewApplication.CreatedByUserID = this.CreatedByUserID;
+
+
+            
+            
+            if (!renewApplication.AddNewApplication(out errorMessage)){
+                return false;
+            }
+
+            this.ApplicationID = renewApplication.ApplicationID;
+            this.DriverID = oldLicense.DriverID;
+            this.LicenseClass = oldLicense.LicenseClass;
+            
+            this.IssueReason = enLicenseIssueReason.Renew;
+            this.IssueDate = DateTime.Today;
+            this.ExpirationDate = DateTime.Today.AddYears(clsLicenseClass.FindByID((int)this.LicenseClass).DefaultValidityLength);
+
+
+            this.LicenseID = clsLicenseDataAccess.Insert
+               (
+                   this.ApplicationID, this.DriverID, (int)this.LicenseClass, this.Notes,
+                   this.PaidFees, (int)this.IssueReason, this.CreatedByUserID
+
+               );
+
+            if (this.LicenseID != -1)
+            {
+                bool isUpdated = clsApplicationDataAccess.Update(this.ApplicationID, (int)enApplicationStatus.Completed);
+                clsLicense.DeActivate(oldLicenseId);
+            }
+
+            return this.LicenseID != -1;
+        }
+
+
+        private bool _Replacement
+            (
+            int oldLicenseId,
+            enApplicationType applicationType,
+            out string errorMessage
+            )
+        {
+            errorMessage = string.Empty;
+
+            
+            clsLicense oldLicense = clsLicense.FindByID(oldLicenseId);
+
+            if(oldLicense == null)
+            {
+                errorMessage = "No License To Replace";
+                return false;
+            }
+            if(oldLicense.IsActive == false)
+            {
+                errorMessage = "This License Is Not Active , Choose An Active License";
+                return false;
+            }
+            if(this.CreatedByUserID == -1)
+            {
+                errorMessage = "User Must Replace The License";
+                return false;
+            }
+
+            int applicationId = -1;
+            switch (applicationType)
+            {
+                case enApplicationType.ReplacementForADamagedDrivingLicense:
+                    clsReplacementForDamageApplication damageApplication = new clsReplacementForDamageApplication();
+                    damageApplication.ApplicantPersonID = oldLicense.PersonID;
+                    damageApplication.CreatedByUserID = this.CreatedByUserID;
+
+                    if(!damageApplication.AddNewApplication(out errorMessage))
+                    {
+                        return false;
+                    }
+                    applicationId = damageApplication.ApplicationID;
+                    break;
+                case enApplicationType.ReplacementForALostDrivingLicense:
+                    clsReplacementForLostApplication lostApplication = new clsReplacementForLostApplication();
+                    lostApplication.ApplicantPersonID = oldLicense.PersonID;
+                    lostApplication.CreatedByUserID = this.CreatedByUserID;
+
+                    if (!lostApplication.AddNewApplication(out errorMessage))
+                    {
+                        return false;
+                    }
+                    applicationId = lostApplication.ApplicationID;
+                    break;
+            }
+
+            this.ApplicationID = applicationId;
+            this.IssueDate = oldLicense.IssueDate;
+            this.ExpirationDate = oldLicense.ExpirationDate;
+            this.DriverID = oldLicense.DriverID;
+            this.IssueReason = applicationType == enApplicationType.ReplacementForADamagedDrivingLicense ? enLicenseIssueReason.ReplacementForDamage : enLicenseIssueReason.ReplacementForLost;
+            this.LicenseClass = oldLicense.LicenseClass;
+
+            this.LicenseID = clsLicenseDataAccess.Insert
                 (
-                    licenseId, applicationId,(enLicenseClass) licenseClassId, driverId,
-                    driverInfo.PersonID, issueDate, expirationDate, notes, paidFees,
-                    isActive,(enLicenseIssueReason) issueReason, createdByUserId,isDetained, driverInfo
+                    this.ApplicationID,this.DriverID,(int)this.LicenseClass,
+                    this.Notes,this.PaidFees,(int)this.IssueReason,this.CreatedByUserID,
+                    this.IssueDate,this.ExpirationDate
+                );
+
+            if(this.LicenseID != -1)
+            {
+                clsLicense.DeActivate(oldLicense.LicenseID);
+                clsApplicationDataAccess.Update(this.ApplicationID,(int) enApplicationStatus.Completed);
+            }
+
+            return this.LicenseID != -1;
+        }
+        public bool ReplacementForDamage
+            (
+                int oldLicenseId,
+                out string errorMessage
+            )
+        {
+            return _Replacement
+                (
+                    oldLicenseId,
+                    enApplicationType.ReplacementForADamagedDrivingLicense,
+                    out errorMessage
                 );
         }
+        public bool ReplacementForLost
+           (
+               int oldLicenseId,
+               out string errorMessage
+           )
+        {
+            return _Replacement
+                (
+                    oldLicenseId,
+                    enApplicationType.ReplacementForALostDrivingLicense,
+                    out errorMessage
+                );
+        }
+
     }
 }

@@ -100,7 +100,7 @@ namespace DrivingLicense.BusinessLogic.Licenses
                 );
         }
 
-        public bool Issue(out string errorMessage)
+        public bool IssueFirstTime(out string errorMessage)
         {
             if(this.ApplicationID == -1)
             {

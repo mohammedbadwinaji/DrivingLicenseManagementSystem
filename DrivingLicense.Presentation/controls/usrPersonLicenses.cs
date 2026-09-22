@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DrivingLicense.BusinessLogic;
 using DrivingLicense.BusinessLogic.Licenses;
 using DrivingLicense.BusinessLogic.Models;
+using DrivingLicense.Presentation.licenses;
 
 namespace DrivingLicense.Presentation.controls
 {
@@ -68,5 +69,44 @@ namespace DrivingLicense.Presentation.controls
             }
 
     }
-}
+
+
+        private int _GetSelectedLocalLicenseID()
+        {
+            if (dgvLocalLicenses.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvLocalLicenses.SelectedRows[0];
+                if (selectedRow.Cells["LicenseID"].Value != null)
+                {
+                    return Convert.ToInt32(selectedRow.Cells["LicenseID"].Value);
+                }
+            }
+            return -1;
+        }
+        private int _GetSelectedInternationalLicenseID()
+        {
+            if (dgvInternationalLicenses.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvInternationalLicenses.SelectedRows[0];
+                if (selectedRow.Cells["InternationalLicenseID"].Value != null)
+                {
+                    return Convert.ToInt32(selectedRow.Cells["InternationalLicenseID"].Value);
+                }
+            }
+            return -1;
+
+        }
+        
+        private void cmiShowLicenseInfo_Click(object sender, EventArgs e)
+        {
+            frmShowLicenseDetails frm = new frmShowLicenseDetails(_GetSelectedLocalLicenseID());
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmShowInternationalLicenseDetails frm = new frmShowInternationalLicenseDetails(_GetSelectedInternationalLicenseID());
+            frm.ShowDialog();
+        }
+    }
 }

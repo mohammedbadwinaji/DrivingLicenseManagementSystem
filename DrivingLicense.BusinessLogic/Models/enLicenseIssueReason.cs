@@ -9,5 +9,8 @@ namespace DrivingLicense.BusinessLogic.Models
     public enum enLicenseIssueReason
     {
         FisrtTime = 1,
+        Renew = 2,
+        ReplacementForDamage = 3,
+        ReplacementForLost = 4
     }
 }
