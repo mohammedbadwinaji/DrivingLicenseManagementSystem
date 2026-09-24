@@ -85,6 +85,12 @@
     <Compile Include="applications\frmLocalDrivingLicenseApplicationManagment.Designer.cs">
       <DependentUpon>frmLocalDrivingLicenseApplicationManagment.cs</DependentUpon>
     </Compile>
+    <Compile Include="applications\frmReleaseDetainedLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applications\frmReleaseDetainedLicenseApplication.Designer.cs">
+      <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="applications\frmRenewLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,12 @@
     </Compile>
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="licenses\frmDetainLecense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="licenses\frmDetainLecense.Designer.cs">
+      <DependentUpon>frmDetainLecense.cs</DependentUpon>
     </Compile>
     <Compile Include="licenses\frmIssueDrivingLicenseFirstTime.cs">
       <SubType>Form</SubType>
@@ -293,6 +305,9 @@
     <EmbeddedResource Include="applications\frmLocalDrivingLicenseApplicationManagment.resx">
       <DependentUpon>frmLocalDrivingLicenseApplicationManagment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="applications\frmReleaseDetainedLicenseApplication.resx">
+      <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="applications\frmRenewLicenseApplication.resx">
       <DependentUpon>frmRenewLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses\frmDetainLecense.resx">
+      <DependentUpon>frmDetainLecense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="licenses\frmIssueDrivingLicenseFirstTime.resx">
       <DependentUpon>frmIssueDrivingLicenseFirstTime.cs</DependentUpon>
@@ -638,6 +656,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Renew Driving License 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Release Detained License 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

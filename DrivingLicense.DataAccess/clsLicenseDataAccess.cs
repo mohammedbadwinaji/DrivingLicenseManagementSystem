@@ -169,10 +169,11 @@ namespace DrivingLicense.DataAccess
             notes = string.Empty;
            
             SqlConnection connection = new SqlConnection(clsSettings.connectionString);
-            string query = @"SELECT	L.*,
+            string query = @"SELECT	TOP 1 L.*,
 		                            (
 			                            CASE 
 				                            WHEN DL.DetainID IS NULL THEN 0
+				                            WHEN DL.IsReleased = 1 THEN 0
 				                            ELSE 1
 			                            END
 		                            ) AS IsDetained
@@ -180,6 +181,7 @@ namespace DrivingLicense.DataAccess
                             LEFT JOIN DetainedLicenses DL
                             ON L.LicenseID = DL.LicenseID
                             WHERE L.LicenseID = @LicenseID
+                            ORDER BY DL.DetainDate DESC
                             ";
 
             SqlCommand command = new SqlCommand(query,connection);

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ms = new System.Windows.Forms.MenuStrip();
-            this.btnClose = new System.Windows.Forms.Button();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +41,10 @@
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.miLocalDrivingLicenseApplicationManagment = new System.Windows.Forms.ToolStripMenuItem();
             this.miManageInternationalLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.miDetainLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.miReleaseDetainedLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.miManageApplicationTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.miManageTestTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.miPeople = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +54,7 @@
             this.miCurrentUserInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.miChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.miSignOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClose = new System.Windows.Forms.Button();
             this.ms.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,24 +72,12 @@
             this.ms.TabIndex = 0;
             this.ms.Text = "menuStrip1";
             // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::DrivingLicense.Presentation.Properties.Resources.Close_32;
-            this.btnClose.Location = new System.Drawing.Point(1218, 22);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 33);
-            this.btnClose.TabIndex = 47;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
             this.toolStripMenuItem7,
+            this.toolStripMenuItem4,
             this.miManageApplicationTypes,
             this.miManageTestTypes});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,7 +98,7 @@
             this.toolStripMenuItem2.Image = global::DrivingLicense.Presentation.Properties.Resources.Driver_License_48;
             this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(366, 70);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(367, 70);
             this.toolStripMenuItem2.Text = "Driving License Services";
             // 
             // toolStripMenuItem3
@@ -180,7 +172,7 @@
             this.toolStripMenuItem7.Image = global::DrivingLicense.Presentation.Properties.Resources.Manage_Applications_64;
             this.toolStripMenuItem7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(366, 70);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(367, 70);
             this.toolStripMenuItem7.Text = "Manage Applications";
             // 
             // miLocalDrivingLicenseApplicationManagment
@@ -201,12 +193,50 @@
             this.miManageInternationalLicenseApplications.Text = "International Driving License Applications";
             this.miManageInternationalLicenseApplications.Click += new System.EventHandler(this.miManageInternationalLicenseApplications_Click);
             // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem8,
+            this.miDetainLicense,
+            this.miReleaseDetainedLicense});
+            this.toolStripMenuItem4.Image = global::DrivingLicense.Presentation.Properties.Resources.Detain_64;
+            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(367, 70);
+            this.toolStripMenuItem4.Text = "Detain Licenses";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Image = global::DrivingLicense.Presentation.Properties.Resources.Detain_32;
+            this.toolStripMenuItem8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(335, 38);
+            this.toolStripMenuItem8.Text = "Manage Detained Licenses";
+            // 
+            // miDetainLicense
+            // 
+            this.miDetainLicense.Image = global::DrivingLicense.Presentation.Properties.Resources.Detain_32;
+            this.miDetainLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miDetainLicense.Name = "miDetainLicense";
+            this.miDetainLicense.Size = new System.Drawing.Size(335, 38);
+            this.miDetainLicense.Text = "Detain License";
+            this.miDetainLicense.Click += new System.EventHandler(this.miDetainLicense_Click);
+            // 
+            // miReleaseDetainedLicense
+            // 
+            this.miReleaseDetainedLicense.Image = global::DrivingLicense.Presentation.Properties.Resources.Release_Detained_License_32;
+            this.miReleaseDetainedLicense.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miReleaseDetainedLicense.Name = "miReleaseDetainedLicense";
+            this.miReleaseDetainedLicense.Size = new System.Drawing.Size(335, 38);
+            this.miReleaseDetainedLicense.Text = "Release Detained License";
+            this.miReleaseDetainedLicense.Click += new System.EventHandler(this.miReleaseDetainedLicense_Click);
+            // 
             // miManageApplicationTypes
             // 
             this.miManageApplicationTypes.Image = global::DrivingLicense.Presentation.Properties.Resources.Application_Types_64;
             this.miManageApplicationTypes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miManageApplicationTypes.Name = "miManageApplicationTypes";
-            this.miManageApplicationTypes.Size = new System.Drawing.Size(366, 70);
+            this.miManageApplicationTypes.Size = new System.Drawing.Size(367, 70);
             this.miManageApplicationTypes.Text = "Manage Application Types";
             this.miManageApplicationTypes.Click += new System.EventHandler(this.miManageApplicationTypes_Click);
             // 
@@ -215,7 +245,7 @@
             this.miManageTestTypes.Image = global::DrivingLicense.Presentation.Properties.Resources.Test_Type_64;
             this.miManageTestTypes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miManageTestTypes.Name = "miManageTestTypes";
-            this.miManageTestTypes.Size = new System.Drawing.Size(366, 70);
+            this.miManageTestTypes.Size = new System.Drawing.Size(367, 70);
             this.miManageTestTypes.Text = "Manage Test Types";
             this.miManageTestTypes.Click += new System.EventHandler(this.miManageTestTypes_Click);
             // 
@@ -290,6 +320,19 @@
             this.miSignOut.Text = "Sign Out";
             this.miSignOut.Click += new System.EventHandler(this.miSignOut_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::DrivingLicense.Presentation.Properties.Resources.Close_32;
+            this.btnClose.Location = new System.Drawing.Point(1218, 22);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 33);
+            this.btnClose.TabIndex = 47;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +379,10 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem miLocalDrivingLicenseApplicationManagment;
         private System.Windows.Forms.ToolStripMenuItem miManageInternationalLicenseApplications;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem miReleaseDetainedLicense;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem miDetainLicense;
     }
 }
 

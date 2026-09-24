@@ -375,5 +375,48 @@ namespace DrivingLicense.BusinessLogic.Licenses
                 );
         }
 
+        public bool Release
+            (
+            int createdByUserId,
+            out string errorMessage
+            )
+        {
+            errorMessage = string.Empty;
+            clsDetainedLicense detainLicnese = clsDetainedLicense.GetLastDetainedPerLicenseID(this.LicenseID);
+            if(detainLicnese != null)
+            {
+                if (detainLicnese.IsReleased)
+                {
+                    errorMessage = $"License With ID {this.LicenseID} Is Not Detained";
+                    return false;
+                }
+            }
+
+            clsReleaseDetainedLicenseApplication releaseDetainedLicenseApplicatio = new clsReleaseDetainedLicenseApplication();
+            releaseDetainedLicenseApplicatio.PaidFees = clsApplicationType.GetFees(enApplicationType.ReleaseDetainedDrivingLicsense);
+            releaseDetainedLicenseApplicatio.ApplicantPersonID = this.PersonID;
+            releaseDetainedLicenseApplicatio.CreatedByUserID = createdByUserId;
+
+
+            if (!releaseDetainedLicenseApplicatio.AddNewApplication(out errorMessage))
+            {
+                return false;
+            }
+
+            detainLicnese.IsReleased = true;
+            detainLicnese.ReleaseDate = DateTime.Now;
+            detainLicnese.ReleasedByUserID = createdByUserId;
+            detainLicnese.ReleaseApplicationID = releaseDetainedLicenseApplicatio.ApplicationID;
+
+            if(detainLicnese.Save(out errorMessage))
+            {
+                clsApplicationDataAccess.Update(detainLicnese.ReleaseApplicationID ?? -1, (int)enApplicationStatus.Completed);
+                return true;
+            }
+
+
+            return false;
+        }
+
     }
 }

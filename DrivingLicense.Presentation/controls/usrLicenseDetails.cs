@@ -13,9 +13,9 @@ namespace DrivingLicense.Presentation.controls
 {
     public partial class usrLicenseDetails : UserControl
     {
-        private int _LicenseID;
+        private int _LicenseID = -1;
 
-        private clsLicense _LicenseInfo;
+        private clsLicense _LicenseInfo = null;
         public usrLicenseDetails()
         {
             InitializeComponent();

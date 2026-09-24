@@ -128,5 +128,15 @@ namespace DrivingLicense.Presentation
         {
             OpenForm(new frmReplacementForDamageOrLostApplication());
         }
+
+        private void miDetainLicense_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmDetainLecense());
+        }
+
+        private void miReleaseDetainedLicense_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmReleaseDetainedLicenseApplication());
+        }
     }
 }

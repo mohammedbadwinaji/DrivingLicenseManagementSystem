@@ -3,55 +3,95 @@
   "WorkspaceRootPath": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\applications\\frmreleasedetainedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmreleasedetainedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\licenses\\clslicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\licenses\\clslicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.dataaccess\\clslicensedataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.dataaccess\\clslicensedataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|solutionrelative:drivinglicense.dataaccess\\clslicensedataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\applications\\clsreplacementforlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clsreplacementforlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\licenses\\clslicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\licenses\\clslicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\controls\\usrlicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\controls\\usrlicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\applications\\clsreplacementfordamageapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clsreplacementfordamageapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\controls\\usrlicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\controls\\usrlicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\licenses\\frmdetainlecense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\licenses\\frmdetainlecense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\applications\\frmreleasedetainedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmreleasedetainedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\clsdetainedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\clsdetainedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\applications\\clsreleasedetainedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clsreleasedetainedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.dataaccess\\clsdetainedlicensedataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|solutionrelative:drivinglicense.dataaccess\\clsdetainedlicensedataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\applications\\clsrenewlocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\applications\\clsrenewlocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clsrenewlocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\applications\\clslocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\licenses\\frmdetainlecense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\licenses\\frmdetainlecense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmreplacementfordamageorlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\applications\\clsreplacementforlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clsreplacementforlostapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\applications\\clsreplacementfordamageapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clsreplacementfordamageapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\applications\\clslocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\applications\\clslocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\models\\enlicenseissuereason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\models\\enlicenseissuereason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\models\\enlicenseissuereason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\controls\\usrpersonlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\controls\\usrpersonlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\controls\\usrpersonlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -63,11 +103,11 @@
       "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmlocaldrivinglicenseapplicationmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\applications\\frminternationallicenseapplicationmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\applications\\frminternationallicenseapplicationmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frminternationallicenseapplicationmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\controls\\usrpersonlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\controls\\usrpersonlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\controls\\usrpersonlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -75,23 +115,15 @@
       "RelativeMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|solutionrelative:drivinglicense.dataaccess\\clsinternationallicenseapplicationdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\applications\\frmrenewlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\controls\\usrlicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\controls\\usrlicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.dataaccess\\clslicenseclassdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.dataaccess\\clslicenseclassdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F63AD17D-D47C-4C60-AA59-2664C41955D5}|DrivingLicense.DataAccess\\DrivingLicense.DataAccess.csproj|solutionrelative:drivinglicense.dataaccess\\clslicenseclassdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.presentation\\licenses\\frmissueinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.presentation\\licenses\\frmissueinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A900ABC9-4F35-42A9-BD79-B8DE77F51210}|DrivingLicense.Presentation\\DrivingLicense.Presentation.csproj|solutionrelative:drivinglicense.presentation\\licenses\\frmissueinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|d:\\course_19\\mysolution2\\drivinglicensemanagementsystem\\drivinglicense.businesslogic\\licenses\\clsinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\drivinglicense.businesslogic\\licenses\\clsinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2968DD3-7ED7-432F-87BE-EB58E6253F59}|DrivingLicense.BusinessLogic\\DrivingLicense.BusinessLogic.csproj|solutionrelative:drivinglicense.businesslogic\\licenses\\clsinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -106,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 255,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,7 +146,184 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "usrLicenseDetails.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\controls\\usrLicenseDetails.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\controls\\usrLicenseDetails.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\controls\\usrLicenseDetails.cs",
+              "RelativeToolTip": "DrivingLicense.Presentation\\controls\\usrLicenseDetails.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAA0wFsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T10:04:12.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmReleaseDetainedLicenseApplication.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs",
+              "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwHsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T08:51:44.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\frmMain.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs",
+              "RelativeToolTip": "DrivingLicense.Presentation\\frmMain.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAQwIoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T16:01:58.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmRenewLicenseApplication.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
+              "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T03:16:22.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "clsDetainedLicense.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\clsDetainedLicense.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\clsDetainedLicense.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\clsDetainedLicense.cs",
+              "RelativeToolTip": "DrivingLicense.BusinessLogic\\clsDetainedLicense.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAcwGsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T09:14:08.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsLicense.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
+              "RelativeToolTip": "DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAGsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T02:21:39.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmReleaseDetainedLicenseApplication.cs [Design]",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs [Design]",
+              "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmReleaseDetainedLicenseApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T08:44:26.296Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "clsDetainedLicenseDataAccess.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.DataAccess\\clsDetainedLicenseDataAccess.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.DataAccess\\clsDetainedLicenseDataAccess.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.DataAccess\\clsDetainedLicenseDataAccess.cs",
+              "RelativeToolTip": "DrivingLicense.DataAccess\\clsDetainedLicenseDataAccess.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAIwI8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T08:56:33.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\frmMain.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs [Design]",
+              "RelativeToolTip": "DrivingLicense.Presentation\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:10:45.526Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmRenewLicenseApplication.cs [Design]",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs [Design]",
+              "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T03:00:24.356Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsReleaseDetainedLicenseApplication.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsReleaseDetainedLicenseApplication.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsReleaseDetainedLicenseApplication.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsReleaseDetainedLicenseApplication.cs",
+              "RelativeToolTip": "DrivingLicense.BusinessLogic\\Applications\\clsReleaseDetainedLicenseApplication.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAUwE0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T08:50:58.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "clsRenewLocalLicenseApplication.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
+              "RelativeToolTip": "DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T02:29:19.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmDetainLecense.cs",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs",
+              "RelativeToolTip": "DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T10:22:39.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmDetainLecense.cs [Design]",
+              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs",
+              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs",
+              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs [Design]",
+              "RelativeToolTip": "DrivingLicense.Presentation\\licenses\\frmDetainLecense.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T10:15:23.156Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "frmReplacementForDamageOrLostApplication.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmReplacementForDamageOrLostApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmReplacementForDamageOrLostApplication.cs",
@@ -127,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 17,
               "Title": "frmReplacementForDamageOrLostApplication.cs [Design]",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmReplacementForDamageOrLostApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmReplacementForDamageOrLostApplication.cs",
@@ -139,19 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmRenewLicenseApplication.cs [Design]",
-              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
-              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
-              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs [Design]",
-              "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T03:00:24.356Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "clsReplacementForLostApplication.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsReplacementForLostApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsReplacementForLostApplication.cs",
@@ -159,12 +356,11 @@
               "RelativeToolTip": "DrivingLicense.BusinessLogic\\Applications\\clsReplacementForLostApplication.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAAwE0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T05:43:23.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T05:43:23.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "clsLocalDrivingLicenseApplication.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsLocalDrivingLicenseApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsLocalDrivingLicenseApplication.cs",
@@ -172,12 +368,11 @@
               "RelativeToolTip": "DrivingLicense.BusinessLogic\\Applications\\clsLocalDrivingLicenseApplication.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAA8wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T05:38:22.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T05:38:22.234Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "clsReplacementForDamageApplication.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsReplacementForDamageApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsReplacementForDamageApplication.cs",
@@ -185,12 +380,11 @@
               "RelativeToolTip": "DrivingLicense.BusinessLogic\\Applications\\clsReplacementForDamageApplication.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAAwEwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T05:36:49.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T05:36:49.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "usrPersonLicenses.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs",
@@ -198,24 +392,22 @@
               "RelativeToolTip": "DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAgwG8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T04:00:23.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T04:00:23.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "usrPersonLicenses.cs [Design]",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs",
               "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs [Design]",
               "RelativeToolTip": "DrivingLicense.Presentation\\controls\\usrPersonLicenses.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T03:56:26.251Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-22T03:56:26.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 4,
               "Title": "usrLicenseDetails.cs [Design]",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\controls\\usrLicenseDetails.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\controls\\usrLicenseDetails.cs",
@@ -227,33 +419,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "frmRenewLicenseApplication.cs",
-              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
-              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
-              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
-              "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmRenewLicenseApplication.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAwwFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T03:16:22.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "clsLicenseDataAccess.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.DataAccess\\clsLicenseDataAccess.cs",
               "RelativeDocumentMoniker": "DrivingLicense.DataAccess\\clsLicenseDataAccess.cs",
               "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.DataAccess\\clsLicenseDataAccess.cs",
               "RelativeToolTip": "DrivingLicense.DataAccess\\clsLicenseDataAccess.cs",
-              "ViewState": "AgIAAP8AAAAAAAAAAAAswAUBAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAUwLcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-22T02:50:17.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "clsLicenseClassDataAccess.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.DataAccess\\clsLicenseClassDataAccess.cs",
               "RelativeDocumentMoniker": "DrivingLicense.DataAccess\\clsLicenseClassDataAccess.cs",
@@ -261,25 +440,11 @@
               "RelativeToolTip": "DrivingLicense.DataAccess\\clsLicenseClassDataAccess.cs",
               "ViewState": "AgIAAH4AAAAAAAAAAAAIwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T02:50:00.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T02:50:00.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "clsRenewLocalLicenseApplication.cs",
-              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
-              "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
-              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
-              "RelativeToolTip": "DrivingLicense.BusinessLogic\\Applications\\clsRenewLocalLicenseApplication.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAowE0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T02:29:19.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "enLicenseIssueReason.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Models\\enLicenseIssueReason.cs",
               "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Models\\enLicenseIssueReason.cs",
@@ -287,12 +452,11 @@
               "RelativeToolTip": "DrivingLicense.BusinessLogic\\Models\\enLicenseIssueReason.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T02:28:01.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T02:28:01.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "frmIssueInternationalLicenseApplication.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\licenses\\frmIssueInternationalLicenseApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\licenses\\frmIssueInternationalLicenseApplication.cs",
@@ -305,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "clsInternationalLicense.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Licenses\\clsInternationalLicense.cs",
               "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Licenses\\clsInternationalLicense.cs",
@@ -313,50 +477,11 @@
               "RelativeToolTip": "DrivingLicense.BusinessLogic\\Licenses\\clsInternationalLicense.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAUwGYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T02:21:51.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T02:21:51.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsLicense.cs",
-              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
-              "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
-              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
-              "RelativeToolTip": "DrivingLicense.BusinessLogic\\Licenses\\clsLicense.cs",
-              "ViewState": "AgIAAG0BAAAAAAAAAAAjwHcBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T02:21:39.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs",
-              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\frmMain.cs",
-              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs",
-              "RelativeToolTip": "DrivingLicense.Presentation\\frmMain.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAApwIAAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T16:01:58.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs",
-              "RelativeDocumentMoniker": "DrivingLicense.Presentation\\frmMain.cs",
-              "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\frmMain.cs [Design]",
-              "RelativeToolTip": "DrivingLicense.Presentation\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T16:01:47.661Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "clsInternationalLicenseApplication.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.BusinessLogic\\Applications\\clsInternationalLicenseApplication.cs",
               "RelativeDocumentMoniker": "DrivingLicense.BusinessLogic\\Applications\\clsInternationalLicenseApplication.cs",
@@ -368,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "clsInternationalLicenseApplicationDataAccess.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.DataAccess\\clsInternationalLicenseApplicationDataAccess.cs",
               "RelativeDocumentMoniker": "DrivingLicense.DataAccess\\clsInternationalLicenseApplicationDataAccess.cs",
@@ -376,12 +501,11 @@
               "RelativeToolTip": "DrivingLicense.DataAccess\\clsInternationalLicenseApplicationDataAccess.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAcwCUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T15:55:07.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T15:55:07.019Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "frmLocalDrivingLicenseApplicationManagment.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs",
@@ -389,24 +513,22 @@
               "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs",
               "ViewState": "AgIAAAQBAAAAAAAAAAAEwBYBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T15:57:52.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T15:57:52.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "frmLocalDrivingLicenseApplicationManagment.cs [Design]",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs",
               "ToolTip": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs [Design]",
               "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmLocalDrivingLicenseApplicationManagment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T15:47:43.574Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-09-21T15:47:43.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "frmInternationalLicenseApplicationManagement.cs",
               "DocumentMoniker": "D:\\Course_19\\MySolution2\\DrivingLicenseManagementSystem\\DrivingLicense.Presentation\\applications\\frmInternationalLicenseApplicationManagement.cs",
               "RelativeDocumentMoniker": "DrivingLicense.Presentation\\applications\\frmInternationalLicenseApplicationManagement.cs",
@@ -414,8 +536,7 @@
               "RelativeToolTip": "DrivingLicense.Presentation\\applications\\frmInternationalLicenseApplicationManagement.cs",
               "ViewState": "AgIAACgBAAAAAAAAAAAjwDQBAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T15:51:00.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T15:51:00.83Z"
             }
           ]
         }

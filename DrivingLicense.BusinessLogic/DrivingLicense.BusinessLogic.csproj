@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Applications\clsApplication.cs" />
+    <Compile Include="Applications\clsReleaseDetainedLicenseApplication.cs" />
     <Compile Include="Applications\clsInternationalLicenseApplication.cs" />
     <Compile Include="Applications\clsLocalDrivingLicenseApplication.cs" />
     <Compile Include="Applications\clsRenewLocalLicenseApplication.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Applications\clsRetakeTestApplication.cs" />
     <Compile Include="clsApplicationType.cs" />
     <Compile Include="clsCountry.cs" />
+    <Compile Include="clsDetainedLicense.cs" />
     <Compile Include="clsDriver.cs" />
     <Compile Include="clsLicenseClass.cs" />
     <Compile Include="clsPerson.cs" />
