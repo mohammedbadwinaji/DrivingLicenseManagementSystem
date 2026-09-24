@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,7 +73,10 @@ namespace DrivingLicense.BusinessLogic
             _Mode = enMode.Edit;
         }
 
-
+        public static DataTable GetAllDetainedLicense()
+        {
+            return clsDetainedLicenseDataAccess.GetAllDetainedLicense();
+        }
         public static clsDetainedLicense FindByID(int detainId)
         {
             int licenseId, createdByUserId;

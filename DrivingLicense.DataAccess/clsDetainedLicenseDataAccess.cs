@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,51 @@ namespace DrivingLicense.DataAccess
 {
     public class clsDetainedLicenseDataAccess
     {
+        public static DataTable GetAllDetainedLicense()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsSettings.connectionString);
+            string query = @"SELECT	DL.DetainID,
+		                            DL.LicenseID,
+		                            DL.DetainDate,
+		                            DL.IsReleased,
+		                            DL.FineFees,
+		                            DL.ReleaseDate,
+		                            P.NationalNo,
+		                            (
+			                            P.FirstName + ' ' +
+			                            P.SecondName + ' ' +
+			                            ISNULL(P.ThirdName,'') + ' ' +
+			                            P.LastName
+		                            ) AS FullName,
+		                            DL.ReleaseApplicationID
+                            FROM DetainedLicenses DL
+                            INNER JOIN Licenses L
+                            ON DL.LicenseID = L.LicenseID
+                            INNER JOIN Drivers D
+                            ON L.DriverID = D.DriverID
+                            INNER JOIN People P
+                            ON D.PersonID = P.PersonID
+                            ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                dt.Load(reader);
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                connection.Close();
+                throw;
+            }
+
+            return dt;
+        }
         public static bool GetByID
             (
                 int detainId,out int licenseId,out DateTime detainDate,

@@ -138,5 +138,20 @@ namespace DrivingLicense.Presentation
         {
             OpenForm(new frmReleaseDetainedLicenseApplication());
         }
+
+        private void miManageDetainedLicenses_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmDetainedLicensesManagement());
+        }
+
+        private void miReleaseDetainedDrivingLicense_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmDetainLecense());
+        }
+
+        private void miRetakeTest_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmLocalDrivingLicenseApplicationManagment());
+        }
     }
 }

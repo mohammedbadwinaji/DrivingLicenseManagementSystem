@@ -142,6 +142,12 @@ namespace DrivingLicense.Presentation.licenses
 
         private void btnDetain_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(txtFineFees.Text))
+            {
+                MessageBox.Show("Enter Fine Fees");
+                return;
+            }
             int licenseId = usrLicenseFilter1.GetLicenseID();
 
             _DetainLicenseInfo = new clsDetainedLicense();
